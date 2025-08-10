@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>United Six - Landing Page</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="Landing-page">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white navbar-custom">
+  <div class="container animate-left animate-on-scroll">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">United Six</a>
+
+    <!-- Mobile toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="mainNav">
+
+      <!-- Nav links -->
+      <ul class="navbar-nav mx-auto text-center text-md-start animate-on-scroll">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <!-- Right buttons -->
+      <div class="d-flex flex-column flex-md-row align-items-center gap-2 animate-on-scroll">
+        <a class="btn btn-outline-primary btn-pill w-100 w-md-auto" href="#">Teach on United Six</a>
+        <a class="btn btn-primary btn-pill w-100 w-md-auto" href="#">Login As Student</a>
+        <button aria-label="menu" class="btn icon-circle">
+          <i class="bi bi-person"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="d-flex py-md-5 py-4 align-items-center hero-section animate-on-scroll">
+    <div class="container animate-on-scroll">
+      <div class="row align-items-center animate-on-scroll">
+        <!-- Left Text -->
+        <div class="text-md-start text-center col-md-6 animate-on-scroll">
+          <h1 class="hero-title animate-on-scroll">
+            Empowering <br />
+            Future Medical <br />
+            Leaders.
+          </h1>
+          <p class="hero-text animate-on-scroll">
+            Explore, learn and teach with United Six
+          </p>
+          <a class="btn btn-light btn-lg me-3" href="#">Explore Courses</a>
+          <a class="btn btn-outline-light btn-lg" href="#">Join as Trainer →</a>
+        </div>
+        <!-- Right Image -->
+        <div class="text-md-start text-center col-md-6 animate-on-scroll">
+          <img alt="Medical World Graphic" class="img-fluid hero-img animate-on-scroll" src="images/logo.png" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Search Section -->
+  <section class="search-section search-section animate-on-scroll">
+    <div class="container animate-zoom animate-on-scroll">
+      <div class="search-box shadow p-4 rounded-4 bg-white animate-on-scroll">
+        <h2 class="mb-4 heading-playfair animate-on-scroll">Find Your Course</h2>
+        <form class="row g-3">
+          <!-- Category -->
+          <div class="col-md-3 col-12 animate-on-scroll">
+            <select class="form-select form-select-lg rounded-3">
+              <option selected="">Select Category</option>
+              <option value="pediatrics">Pediatrics</option>
+              <option value="oncology">Oncology</option>
+              <option value="surgery">Surgery</option>
+            </select>
+          </div>
+          <!-- Course Type -->
+          <div class="col-md-3 col-12 animate-on-scroll">
+            <select class="form-select form-select-lg rounded-3">
+              <option selected="">Select Course Type</option>
+              <option value="one-time">One Time</option>
+              <option value="series">Series</option>
+            </select>
+          </div>
+          <!-- Course Name -->
+          <div class="col-md-4 col-12 animate-on-scroll">
+            <div class="input-group input-group-lg animate-on-scroll">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="bi bi-search"></i>
+              </span>
+              <input class="form-control border-start-0" placeholder="Course Name" type="text" />
+            </div>
+          </div>
+          <!-- Search Button -->
+          <div class="col-md-2 col-12 animate-on-scroll">
+            <button class="btn btn-primary btn-lg w-100 rounded-3" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Categories -->
+  <section class="categories-section bg-light animate-on-scroll">
+    <div class="container py-5 animate-on-scroll">
+      <h2 class="text-center mb-5 heading-playfair animate-on-scroll">Explore Our Categories</h2>
+      <div class="row g-4 animate-on-scroll">
+        <!-- Repeat for all categories -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Pediatrics" class="card-img-top img-fluid animate-on-scroll"
+                  src="images/Pediatrics_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Pediatrics</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Gynecology" class="card-img-top img-fluid animate-on-scroll"
+                  src="images/Gynecology_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Gynecology</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Dermatology" class="card-img-top img-fluid animate-on-scroll"
+                  src="images/Dermatology_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Dermatology</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Cardiology" class="card-img-top img-fluid animate-on-scroll"
+                  src="images/Cardiology_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Cardiology</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Oncology" class="card-img-top img-fluid animate-on-scroll" src="images/Oncology_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Oncology</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Orthopedics" class="card-img-top img-fluid animate-on-scroll"
+                  src="images/Orthopedics_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Orthopedics</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <a class="text-decoration-none" href="#">
+            <div class="card category-card h-100 animate-on-scroll">
+              <div class="img-wrapper animate-on-scroll">
+                <img alt="Surgery" class="card-img-top img-fluid animate-on-scroll" src="images/Surgery_new.png" />
+              </div>
+              <div class="card-footer-wrapper animate-on-scroll">
+                <span class="category-name">Surgery</span>
+                <i class="bi bi-arrow-right arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-white trainers-section animate-on-scroll" data-anim="animate-right">
+    <div class="container animate-on-scroll">
+      <!-- First row: heading + right content -->
+      <div class="row align-items-start animate-on-scroll">
+        <!-- Left content -->
+        <div class="col-lg-5 mb-4 mb-lg-0 animate-on-scroll">
+          <div class="d-flex align-items-start mb-3 animate-on-scroll">
+            <div
+              class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center feature-icon animate-on-scroll">
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="ms-3 animate-on-scroll">
+              <small class="text-muted">Experienced instructors</small>
+              <h2 class="mt-2 card-title-playfair animate-on-scroll">
+                We've amazing<br />skills for teaching.
+              </h2>
+              <p class="text-muted animate-on-scroll">Lorem ipsum is simply dummy of the printing and typesetting
+                industry lorem ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right content -->
+        <div class="col-lg-7 position-relative animate-on-scroll">
+          <div class="d-flex justify-content-center gap-5 progress-wrapper animate-on-scroll">
+            <div class="text-center animate-on-scroll">
+              <div aria-hidden="true" class="progress-circle animate-on-scroll" data-value="90"><span>90%</span></div>
+              <small class="d-block mt-2 text-muted">Value for results</small>
+            </div>
+            <div class="text-center animate-on-scroll">
+              <div aria-hidden="true" class="progress-circle animate-on-scroll" data-value="95"><span>95%</span></div>
+              <small class="d-block mt-2 text-muted">Global experience</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second row: Full-width centered carousel -->
+      <div class="row mt-5 animate-on-scroll">
+        <div class="col-12 animate-on-scroll">
+          <div class="carousel slide mx-auto trainer-carousel animate-on-scroll" data-bs-ride="carousel"
+            id="trainerCarousel">
+            <div class="carousel-inner animate-on-scroll">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-4 justify-content-center animate-on-scroll">
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Jessica Dover" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_1.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Jessica Dover</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Jeremy Dupont" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_2.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Jeremy Dupont</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Johnny Parker" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_3.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Johnny Parker</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Michal Ruheen" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_4.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Michal Ruheen</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item ">
+                <div class="row g-4 justify-content-center animate-on-scroll">
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Trainer 5" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_1.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Trainer 5</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Trainer 6" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_2.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Trainer 6</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Trainer 7" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_3.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Trainer 7</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 text-center animate-on-scroll">
+                    <div class="trainer-card h-100 animate-on-scroll">
+                      <div class="img-wrapper mb-3 animate-on-scroll">
+                        <img alt="Trainer 8" class="h-100 img-fluid w-100 animate-on-scroll"
+                          src="images/Carousel_4.png" />
+                      </div>
+                      <h6 class="mb-0 animate-on-scroll">Trainer 8</h6>
+                      <small class="text-primary">Trainer</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#trainerCarousel" type="button">
+              <span aria-hidden="true" class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#trainerCarousel" type="button">
+              <span aria-hidden="true" class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Courses -->
+  <section class="py-5 bg-white animate-on-scroll">
+    <div class="container animate-on-scroll">
+      <div class="d-flex justify-content-between align-items-center mb-4 animate-zoom animate-on-scroll">
+        <h2 class="mb-0 heading-playfair animate-on-scroll">Featured Courses</h2>
+        <button class="btn btn-light border">
+          <i class="bi bi-filter"></i> Filter
+        </button>
+      </div>
+      <div class="row g-4 animate-on-scroll">
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Pediatric Growth &amp; Nutrition" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Pediatric growth and Nutrition.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Pediatric Growth &amp; Nutrition</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Fernando Torres</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 1 Session
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-info text-dark">One-time</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Advances in Cardiology" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Container (6).png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Advances in Cardiology</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Priya Sharma</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Cardiology and Heart Diseases" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Cardiology and Heart Diseases.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Cardiology and Heart Diseases</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. David John</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="General Surgery" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Container (7).png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">General Surgery, including laparoscopy</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Raju Menon</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 1 Session
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-info text-dark">One-time</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Gynecology and Obstetrics" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Gynecology.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Gynecology and Obstetrics</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Alex Becker</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Dermagnostix Webinar Series" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Derma.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Dermagnostix Webinar Series</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Joseph Kuruvila</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br />
+  <!-- Upcoming Courses -->
+  <section class="py-5 bg-white animate-on-scroll">
+    <div class="container animate-on-scroll">
+      <div class="d-flex justify-content-between align-items-center mb-4 animate-on-scroll">
+        <h2 class="mb-0 heading-playfair animate-on-scroll">Upcoming Courses</h2>
+      </div>
+      <div class="row g-4 animate-on-scroll">
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Pediatric Growth &amp; Nutrition" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Pediatric growth and Nutrition.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Pediatric Growth &amp; Nutrition</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Fernando Torres</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 1 Session
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-info text-dark">One-time</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Advances in Cardiology" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Container (6).png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Advances in Cardiology</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Priya Sharma</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="Cardiology and Heart Diseases" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Cardiology and Heart Diseases.png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">Cardiology and Heart Diseases</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. David John</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 5 Sessions
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-primary">Series</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 animate-on-scroll">
+          <div class="card h-100 shadow-sm border-0 animate-on-scroll">
+            <div class="position-relative animate-on-scroll">
+              <img alt="General Surgery" class="card-img-top img-fluid animate-on-scroll"
+                src="images/Container (7).png" />
+              <span class="badge bg-danger position-absolute top-0 start-0 m-2 px-3 py-2">KWD 60.00</span>
+            </div>
+            <div class="card-body animate-on-scroll">
+              <h5 class="card-title animate-on-scroll">General Surgery, including laparoscopy</h5>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                <i class="bi bi-calendar-event me-1"></i> 22 July 2025 at 10:00 AM
+              </p>
+              <p class="mb-2 text-muted small animate-on-scroll">
+                Session by: <strong>Dr. Raju Menon</strong>
+              </p>
+              <p class="mb-3 text-muted small animate-on-scroll">
+                <i class="bi bi-collection-play me-1"></i> 1 Session
+              </p>
+              <div class="d-flex justify-content-between align-items-center animate-on-scroll">
+                <span class="badge bg-info text-dark">One-time</span>
+                <a class="text-primary fw-semibold text-decoration-none" href="#">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 animate-on-scroll">
+    <div class="container animate-on-scroll" data-anim="animate-left">
+      <div class="row align-items-center animate-on-scroll">
+        <!-- Left Image -->
+        <div class="col-lg-6 text-center mb-4 mb-lg-0 animate-on-scroll">
+          <img alt="Medical Expert" class="img-fluid rounded-circle animate-on-scroll" src="images/Doctor.png" />
+        </div>
+        <!-- Right Text -->
+        <div class="col-lg-6 animate-on-scroll">
+          <h2 class="fw-bold mb-3 heading-playfair animate-on-scroll">
+            Are you a Medical Expert? <br /> Start Teaching!
+          </h2>
+          <p class="text-muted animate-on-scroll">
+            United Six is a dedicated LMS platform built to empower the next generation of medical professionals.
+            We bring together students and expert faculty in a seamless digital environment where learning, teaching,
+            and growth converge.
+          </p>
+          <!-- Card -->
+          <div class="p-4 mt-4 mb-4 rounded-3 gradient-box animate-on-scroll">
+            <h6 class="fw-bold mb-1 animate-on-scroll">Master the skills that matter to you</h6>
+            <p class="mb-0 text-muted animate-on-scroll">Web-based training you can consume at your own pace. Courses
+              are interactive.</p>
+            <br />
+            <!-- Button -->
+            <a class="btn btn-primary btn-lg" href="#">
+              Become a Trainer →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Who We Are -->
+  <section class="py-5 blue-section animate-on-scroll">
+    <div class="container animate-on-scroll">
+      <div class="row align-items-start animate-on-scroll">
+        <!-- Left content -->
+        <div class="order-md-1 order-2 col-lg-5 mb-lg-0 mb-4 animate-on-scroll">
+          <div class="d-flex align-items-center mb-3 animate-on-scroll">
+            <img alt="Icon" class="img-fluid me-2 animate-on-scroll" src="images/Background.png" />
+            <span class="fw-semibold">Guaranteed and certified</span>
+          </div>
+          <h2 class="fw-bold mb-3 heading-playfair animate-on-scroll">Who we are</h2>
+          <p class="mb-4 animate-on-scroll">
+            United Six is a dedicated LMS platform built to empower the next generation of medical professionals.
+            We bring together students and expert faculty in a seamless digital environment where learning, teaching
+            and growth converge.
+          </p>
+          <a class="btn btn-light text-primary fw-semibold" href="#">
+            Learn more →
+          </a>
+        </div>
+        <!-- Right content - Zig Zag Layout -->
+        <div class="order-md-2 order-1 col-lg-7 animate-on-scroll">
+          <br /><br />
+          <div class="row animate-on-scroll">
+            <!-- Left column of zig zag -->
+            <div class="col-md-6 d-flex flex-column justify-content-between animate-on-scroll">
+              <div class="mb-5 animate-on-scroll">
+                <div class="position-relative animate-on-scroll">
+                  <h1 class="fw-bold opacity-25 display-1 position-absolute step-number animate-on-scroll">01</h1>
+                  <h5 class="fw-bold position-relative animate-on-scroll">Student</h5>
+                  <p class="small opacity-75 animate-on-scroll">eLearning allows learners <br /> to quickly and more
+                    easily <br /> complete
+                    their training.</p>
+                  <div class="step-separator animate-on-scroll"></div>
+                </div>
+              </div>
+              <br />
+              <div class="animate-on-scroll">
+                <div class="position-relative animate-on-scroll">
+                  <h1 class="fw-bold opacity-25 display-1 position-absolute step-number animate-on-scroll">03</h1>
+                  <h5 class="fw-bold position-relative animate-on-scroll">Review</h5>
+                  <p class="small opacity-75 animate-on-scroll">eLearning allows learners <br /> to quickly and more
+                    easily <br /> complete
+                    their training.</p>
+                  <div class="step-separator animate-on-scroll"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Right column of zig zag -->
+            <div class="col-md-6 d-flex flex-column justify-content-between zigzag-offset animate-on-scroll">
+              <div class="mb-5 animate-on-scroll">
+                <div class="position-relative animate-on-scroll">
+                  <h1 class="fw-bold opacity-25 display-1 position-absolute step-number animate-on-scroll">02</h1>
+                  <h5 class="fw-bold position-relative animate-on-scroll">Learn</h5>
+                  <p class="small opacity-75 animate-on-scroll">eLearning allows learners <br /> to quickly and more
+                    easily <br /> complete
+                    their training.</p>
+                  <div class="step-separator animate-on-scroll"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="py-5 footer-dark">
+    <div class="container text-lg-start text-center animate-right animate-on-scroll">
+      <div class="text-lg-start text-center row animate-on-scroll">
+        <!-- Left Column -->
+        <div class="mb-lg-0 col-lg-4 text-lg-start text-center mb-4 animate-on-scroll">
+          <h5 class="fw-bold animate-on-scroll">United Six</h5>
+          <p class="small footer-text-muted animate-on-scroll">
+            We are providing high-quality courses for about <br /> ten years.
+          </p>
+          <div class="text-lg-start d-flex text-center gap-2 animate-on-scroll">
+            <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+              <img alt="" class="img-fluid animate-on-scroll" src="images/Link - hims on Facebook.png" />
+            </a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+              <img alt="" class="img-fluid animate-on-scroll" src="images/Link - hims on Twitter.png" />
+            </a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+              <img alt="" class="img-fluid animate-on-scroll" src="images/Link - hims on Instagram.png" />
+            </a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+              <img alt="" class="img-fluid animate-on-scroll" src="images/Link - hims on TikTok.png" />
+            </a>
+          </div>
+        </div>
+        <!-- Middle Column -->
+        <div class="mb-lg-0 col-lg-4 text-lg-start text-center mb-4 animate-on-scroll">
+          <h6 class="fw-bold mb-3 animate-on-scroll">Sitemap</h6>
+          <ul class="list-unstyled small animate-on-scroll">
+            <li><a class="text-white text-decoration-none" href="#">Courses</a></li>
+            <li><a class="text-white text-decoration-none" href="#">Login As Student</a></li>
+            <li><a class="text-white text-decoration-none" href="#">Teach on United Six</a></li>
+            <li><a class="text-white text-decoration-none" href="#">Support / Help</a></li>
+          </ul>
+        </div>
+        <!-- Right Column -->
+        <div class="text-lg-start text-center col-lg-4 animate-on-scroll">
+          <h6 class="fw-bold mb-3 animate-on-scroll">Need help?</h6>
+          <p class="small mb-1 animate-on-scroll">Call us directly?</p>
+          <p class="fw-bold mb-2 animate-on-scroll">
+            +1 234 567 8910
+            <span class="badge bg-danger ms-2">FREE</span>
+          </p>
+          <p class="small mb-1 animate-on-scroll">Need support?</p>
+          <a class="text-white small text-decoration-underline" href="mailto:help@lorem.com">help@lorem.com</a>
+        </div>
+      </div>
+      <!-- Bottom copyright -->
+      <hr class="border-secondary mt-4" />
+      <div
+        class="pt-3 d-flex align-items-center text-lg-start text-center small justify-content-between footer-text-muted flex-column flex-md-row animate-on-scroll">
+        <p class="mb-0 animate-on-scroll">© 2025 United Six is Proudly Powered by <a
+            class="text-white text-decoration-underline" href="#"><br>ENS Consultants</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Font Awesome CDN (Make sure this is inside <head> or before </body>) -->
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-p0Q3fFQ5kG7yUXVv3D3sRkJqGQnVb5V+gFv7sPvZ2m6x7Ih8r1zqRO2mq+bhZp4QZVuZb1dV4z5s3zFjFZrGsw=="
+    referrerpolicy="no-referrer" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/your-kit-id.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

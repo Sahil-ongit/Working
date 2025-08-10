@@ -1,0 +1,699 @@
+/* --- INDEX PAGE STYLES --- */
+
+.Login-page body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+}
+
+@font-face {
+  font-family: 'Belleza';
+  src: url('fonts/Belleza-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Login-page #loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.Login-page #loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Login-page .loader-icon {
+  font-size: 5rem;
+  color: #0180FF;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); }
+}
+
+.Login-page .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Login-page .content-row {
+  flex-grow: 1;
+}
+
+.Login-page .image-column {
+  background-image: url('../images/logo.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center 220px;
+  background-color: #0080FF;
+  color: white;
+  height: 100vh;
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.Login-page .image-column::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+.Login-page .image-column h2 {
+  font-family: 'Belleza', sans-serif;
+  font-weight: normal;
+  font-size: calc(1.8rem + 2vw);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  margin-top: 3rem;
+}
+
+/* --- FORM SECTION --- */
+.Login-page .form-column {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.Login-page .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.Login-page .login-form-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.Login-page .login-form-container h1 {
+  font-weight: 700;
+}
+
+.Login-page .form-control:focus {
+  border-color: #0180FF;
+  box-shadow: 0 0 0 0.25rem rgba(1, 128, 255, 0.25);
+}
+
+.Login-page .btn-primary {
+  background-color: #0180FF;
+  border: none;
+}
+
+.Login-page .btn-google {
+  border: 1px solid #dee2e6;
+  background-color: white;
+  color: #495057;
+}
+
+.Login-page .btn-google:hover {
+  background-color: #f8f9fa;
+}
+
+.Login-page .google-icon {
+  color: #db4437;
+}
+
+.Login-page .brand-name {
+  color: #0180FF;
+  font-family: 'Belleza', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.Login-page a {
+  color: #0180FF;
+}
+
+.Login-page .password-icon {
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  z-index: 5;
+}
+
+.Login-page #password {
+  padding-right: 65px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+  .Login-page .image-column {
+    background-size: 50%;
+    background-position: center 70px;
+    height: 50vh;
+    padding: 1rem 1rem;
+    background-position: center 150px !important; /* push image down */
+  
+  }
+
+  .Login-page .image-column::after {
+    height: 100px;
+  }
+
+  .Login-page .brand-name {
+    font-size: 2rem;
+  }
+}
+
+
+/* --- LANDING PAGE STYLES --- */
+
+
+
+/* Navbar */
+.Landing-page .navbar-custom {
+  background: #fff;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  min-height: 76px;
+}
+
+.Landing-page .navbar-brand {
+  font-family: "Playfair Display", serif;
+  color: #1e90ff;
+  font-size: 32px;
+  letter-spacing: .2px;
+}
+
+.Landing-page .navbar-brand:hover {
+  color: #1e90ff;
+}
+
+.Landing-page .nav-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Landing-page .nav-center .nav-link {
+  color: #222;
+  font-weight: 500;
+  padding: .25rem .5rem;
+}
+
+.Landing-page .nav-center .nav-link.active,
+.Landing-page .nav-center .nav-link:hover {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.Landing-page .btn-pill {
+  border-radius: 999px;
+  padding: .45rem 1.1rem;
+  font-weight: 600;
+}
+
+.Landing-page .icon-circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #0d6efd;
+  background: #fff;
+}
+
+.Landing-page .progress-circle {
+  transition: background 0.3s linear;
+}
+
+@media (max-width: 767.98px) {
+  .Landing-page .nav-center {
+    display: none !important;
+  }
+}
+
+.Landing-page .img-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+/* Hero */
+.Landing-page .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+}
+
+/* Categories */
+.Landing-page .category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Features */
+.Landing-page .feature-box {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Trainers */
+.Landing-page .trainer-img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Landing-page .progress-wrapper {
+  margin-left: 500px;
+}
+
+.Landing-page .search-box select,
+.Landing-page .search-box input {
+  height: 56px;
+}
+
+.Landing-page .search-box .form-select,
+.Landing-page .search-box .form-control {
+  border-radius: 12px;
+}
+
+.Landing-page .search-box .btn-primary {
+  background-color: #007BFF;
+  border: none;
+  font-weight: 600;
+}
+
+/* Custom category cards */
+.Landing-page .categories-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.Landing-page .category-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Landing-page .category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Landing-page .card {
+  border: none !important;
+}
+
+.Landing-page .category-card .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Landing-page .card-footer-wrapper {
+  background: #fff;
+  padding: 0.9rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Landing-page #trainerCarousel {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Landing-page .category-card .card-body {
+  padding: 1rem 1.25rem;
+}
+
+.Landing-page .category-card .card-text-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Landing-page .category-card .category-name {
+  font-weight: 500;
+  color: #212529;
+}
+
+.Landing-page .category-card .arrow-icon {
+  font-size: 1.3rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.Landing-page .category-card:hover .arrow-icon {
+  color: #0d6efd;
+}
+
+/* Progress circle */
+.Landing-page .progress-circle {
+  --size: 96px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0d6efd;
+  background: conic-gradient(#0d6efd 0% var(--value, 0%), #e9ecef var(--value, 0%) 100%);
+  position: relative;
+  margin: 0 auto;
+}
+
+.Landing-page .progress-circle::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) - 22px);
+  height: calc(var(--size) - 22px);
+  border-radius: 50%;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+  z-index: 0;
+}
+
+.Landing-page .progress-circle span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Trainer image box */
+.Landing-page .trainer-card .img-wrapper {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Landing-page .trainer-card img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* nav buttons */
+.Landing-page .trainer-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.Landing-page .trainer-nav.left {
+  left: -18px;
+}
+
+.Landing-page .trainer-nav.right {
+  right: -18px;
+}
+
+@media (max-width: 991.98px) {
+  .Landing-page .trainer-nav {
+    display: none !important;
+  }
+}
+    /* --- General --- */
+.Landing-page .text-muted-white {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Icons --- */
+.Landing-page .icon-blue {
+  color: #0d6efd;
+  font-size: 18px;
+}
+
+/* --- Hero Section --- */
+.Landing-page .hero-section {
+  background-color: #0180FF;
+  padding: 80px 0;
+}
+
+.Landing-page .hero-title {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.Landing-page .hero-text {
+  color: white;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.Landing-page .hero-img {
+  max-height: 600px;
+}
+
+/* --- Search Section --- */
+.Landing-page .search-section {
+  margin-top: -50px;
+  position: relative;
+  z-index: 5;
+}
+
+/* --- Headings with Playfair --- */
+.Landing-page .heading-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* --- Feature Icon --- */
+.Landing-page .feature-icon {
+  width: 60px;
+  height: 45px;
+}
+
+/* --- Card Headings --- */
+.Landing-page .card-title-playfair {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+/* --- Carousel --- */
+.Landing-page .trainer-carousel {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* --- Gradient Box --- */
+.Landing-page .gradient-box {
+  background: linear-gradient(to right, #f8f9fa, #f0f4ff);
+}
+
+/* --- Decorative Image --- */
+.Landing-page .decorative-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.4;
+}
+
+/* --- Blue Section --- */
+.Landing-page .blue-section {
+  background-color: #0180FF;
+  color: white;
+}
+
+/* --- Step Number --- */
+.Landing-page .step-number {
+  top: -60px;
+  left: 0;
+}
+
+/* --- Step Separator --- */
+.Landing-page .step-separator {
+  width: 40px;
+  height: 2px;
+  background: white;
+  margin: 8px 0;
+}
+
+/* --- Zig-zag Offset --- */
+.Landing-page .zigzag-offset {
+  margin-top: 60px;
+}
+
+/* --- Footer --- */
+.Landing-page .footer-dark {
+  background-color: #06080F;
+  color: #fff;
+}
+
+.Landing-page .footer-text-muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Default state before animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Active animation state */
+.animate-active {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Initial hidden state */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+/* Animation classes */
+.animate-up { animation: fadeInUp 1s ease forwards; }
+.animate-left { animation: fadeInLeft 1s ease forwards; }
+.animate-right { animation: fadeInRight 1s ease forwards; }
+.animate-zoom { animation: zoomIn 1s ease forwards; }
+
+
+/* Responsive fixes for Landing-page */
+@media (max-width: 768px) {
+  .Landing-page .progress-wrapper {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .Landing-page .hero-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .Landing-page .hero-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .Landing-page .hero-img {
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  .Landing-page .trainer-card .img-wrapper {
+    height: 200px;
+  }
+
+  .Landing-page .zigzag-offset {
+    margin-top: 30px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .Landing-page .category-card .card-body {
+    padding: 0.75rem;
+  }
+
+  .Landing-page .category-card .category-name {
+    font-size: 0.95rem;
+  }
+
+  .Landing-page .step-number {
+    font-size: 2rem;
+    top: -30px;
+  }
+}
+@media (max-width: 576px) {
+  .Landing-page .feature-icon {
+    width: 60px;
+    height: 35px;
+    font-size: 0.9rem; /* shrink icon inside */
+  }
+}
+@media (max-width: 768px) {
+  .Landing-page .footer-dark .d-flex {
+    justify-content: center !important;
+  }
+}
