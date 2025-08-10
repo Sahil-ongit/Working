@@ -18,49 +18,63 @@
 
 <body class="Landing-page">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-white navbar-custom">
-  <div class="container animate-left animate-on-scroll">
+  <nav class="navbar navbar-expand-xl navbar-light bg-white navbar-custom py-3">
+    <div class="container d-flex justify-content-between align-items-center">
 
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">United Six</a>
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold me-auto" href="#">United Six</a>
 
-    <!-- Mobile toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Burger button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="mainNav">
+      <!-- Offcanvas Menu (Mobile, Tablets, and iPads) -->
+      <div class="offcanvas offcanvas-start d-xl-none custom-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title mx-auto" id="mobileMenuLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white text-reset position-absolute end-0 me-3"
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Courses</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Contact Us</a></li>
+          </ul>
+          <div class="d-flex flex-column gap-2 mt-3 mobile-btn-group">
+            <a class="btn btn-outline-light btn-pill w-100" href="#">Teach on United Six</a>
+            <a class="btn btn-light text-primary btn-pill w-100" href="#">Login As Student</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Nav links -->
-      <ul class="navbar-nav mx-auto text-center text-md-start animate-on-scroll">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-      </ul>
+      <!-- Desktop Menu (Only ≥1200px) -->
+      <div class="collapse navbar-collapse d-none d-xl-flex justify-content-center flex-grow-1">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+      </div>
 
-      <!-- Right buttons -->
-      <div class="d-flex flex-column flex-md-row align-items-center gap-2 animate-on-scroll">
-        <a class="btn btn-outline-primary btn-pill w-100 w-md-auto" href="#">Teach on United Six</a>
-        <a class="btn btn-primary btn-pill w-100 w-md-auto" href="#">Login As Student</a>
-        <button aria-label="menu" class="btn icon-circle">
-          <i class="bi bi-person"></i>
-        </button>
+      <!-- Desktop Buttons -->
+      <div class="d-none d-xl-flex align-items-center gap-2 ms-auto">
+        <a class="btn btn-outline-primary btn-pill" href="#">Teach on United Six</a>
+        <a class="btn btn-primary btn-pill" href="#">Login As Student</a>
       </div>
 
     </div>
-  </div>
-</nav>
+  </nav>
+
+
+
+
+
 
   <!-- Hero Section -->
   <section class="d-flex py-md-5 py-4 align-items-center hero-section animate-on-scroll">
@@ -76,8 +90,11 @@
           <p class="hero-text animate-on-scroll">
             Explore, learn and teach with United Six
           </p>
-          <a class="btn btn-light btn-lg me-3" href="#">Explore Courses</a>
-          <a class="btn btn-outline-light btn-lg" href="#">Join as Trainer →</a>
+          <div class="mobile-btn-group">
+            <a href="#" class="btn btn-primary btn-pill bg-white text-primary">Explore Courses</a>
+            <a href="#" class="btn btn-outline-primary btn-pill text-white">Join as Trainer</a>
+          </div>
+
         </div>
         <!-- Right Image -->
         <div class="text-md-start text-center col-md-6 animate-on-scroll">
@@ -268,114 +285,111 @@
         </div>
       </div>
       <!-- Second row: Full-width centered carousel -->
-      <div class="row mt-5 animate-on-scroll">
-        <div class="col-12 animate-on-scroll">
-          <div class="carousel slide mx-auto trainer-carousel animate-on-scroll" data-bs-ride="carousel"
-            id="trainerCarousel">
-            <div class="carousel-inner animate-on-scroll">
+      <div class="row mt-5">
+        <div class="col-12">
+          <div id="trainerCarousel" class="carousel slide mx-auto trainer-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <div class="row g-4 justify-content-center animate-on-scroll">
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Jessica Dover" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_1.png" />
+                <div class="row g-4 justify-content-center">
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_1.png" alt="Jessica Dover" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Jessica Dover</h6>
+                      <h6 class="mb-0">Jessica Dover</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Jeremy Dupont" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_2.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_2.png" alt="Jeremy Dupont" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Jeremy Dupont</h6>
+                      <h6 class="mb-0">Jeremy Dupont</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Johnny Parker" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_3.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_3.png" alt="Johnny Parker" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Johnny Parker</h6>
+                      <h6 class="mb-0">Johnny Parker</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Michal Ruheen" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_4.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_4.png" alt="Michal Ruheen" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Michal Ruheen</h6>
+                      <h6 class="mb-0">Michal Ruheen</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
                 </div>
               </div>
+
               <!-- Slide 2 -->
-              <div class="carousel-item ">
-                <div class="row g-4 justify-content-center animate-on-scroll">
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Trainer 5" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_1.png" />
+              <div class="carousel-item">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_1.png" alt="Trainer 5" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Trainer 5</h6>
+                      <h6 class="mb-0">Trainer 5</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Trainer 6" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_2.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_2.png" alt="Trainer 6" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Trainer 6</h6>
+                      <h6 class="mb-0">Trainer 6</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Trainer 7" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_3.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_3.png" alt="Trainer 7" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Trainer 7</h6>
+                      <h6 class="mb-0">Trainer 7</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
-                  <div class="col-6 col-md-3 text-center animate-on-scroll">
-                    <div class="trainer-card h-100 animate-on-scroll">
-                      <div class="img-wrapper mb-3 animate-on-scroll">
-                        <img alt="Trainer 8" class="h-100 img-fluid w-100 animate-on-scroll"
-                          src="images/Carousel_4.png" />
+                  <div class="col-6 col-md-3 text-center">
+                    <div class="trainer-card h-100">
+                      <div class="img-wrapper mb-3">
+                        <img src="images/Carousel_4.png" alt="Trainer 8" class="h-100 img-fluid w-100" />
                       </div>
-                      <h6 class="mb-0 animate-on-scroll">Trainer 8</h6>
+                      <h6 class="mb-0">Trainer 8</h6>
                       <small class="text-primary">Trainer</small>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
+
             <!-- Controls -->
-            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#trainerCarousel" type="button">
-              <span aria-hidden="true" class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#trainerCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#trainerCarousel" type="button">
-              <span aria-hidden="true" class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#trainerCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
+
+
     </div>
   </section>
   <!-- Featured Courses -->

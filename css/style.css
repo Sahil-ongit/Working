@@ -91,6 +91,108 @@
   line-height: 1.2;
   margin-top: 3rem;
 }
+/* Custom offcanvas styling for mobile menu */
+.custom-offcanvas {
+  background-color: #0180FF;
+  color: #fff;
+}
+
+.custom-offcanvas .offcanvas-title {
+  color: #fff;
+}
+
+.custom-offcanvas .nav-link {
+  color: #fff !important;
+}
+
+.custom-offcanvas .nav-link:hover {
+  color: #dbeafe !important; /* lighter hover effect */
+}
+
+.custom-offcanvas .btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+
+.custom-offcanvas .btn-outline-light:hover {
+  background-color: #fff;
+  color: #0180FF;
+}
+/* Active link color for desktop navbar */
+.navbar-custom .nav-link.active {
+  font-weight: bold;
+  color: #0180FF !important; /* blue highlight */
+  /* underline effect */
+}
+@media (max-width: 768px) {
+  .custom-offcanvas .offcanvas-header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .custom-offcanvas .btn-close {
+    position: absolute;
+    right: 15px;
+  }
+}
+
+
+/* iPad responsive adjustments */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  /* Force offcanvas menu on tablets */
+  .navbar-expand-xl .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-expand-xl .navbar-toggler {
+    display: block !important;
+  }
+
+  /* Center nav items in offcanvas for tablets */
+  .custom-offcanvas .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .custom-offcanvas .nav-link {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* Buttons styling for tablets */
+  .custom-offcanvas .mobile-btn-group {
+    padding: 15px 0;
+    gap: 10px;
+  }
+
+  .custom-offcanvas .mobile-btn-group .btn {
+    width: 100%;
+  }
+}
+/* Move "Empowering Future Medical Leader" text & images down */
+@media (max-width: 1199.98px) {
+  .Login-page .image-column {
+    padding-bottom: 80px; /* adjust as needed */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .mobile-btn-group {
+     /* white background */
+    padding: 15px;
+    border-radius: 8px; /* optional rounded corners */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* gap between buttons */
+  }
+
+  .mobile-btn-group .btn {
+    width: 100%; /* same width */
+    text-align: center;
+  }
+}
+
 
 /* --- FORM SECTION --- */
 .Login-page .form-column {
@@ -223,6 +325,10 @@
   color: #222;
   font-weight: 500;
   padding: .25rem .5rem;
+}
+
+.nav-link.active{
+  color:#0180FF ;
 }
 
 .Landing-page .nav-center .nav-link.active,
@@ -697,3 +803,20 @@
     justify-content: center !important;
   }
 }
+
+@media (max-width: 768px) {
+  #trainerCarousel .carousel-item .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  #trainerCarousel .carousel-item .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    scroll-snap-align: start;
+  }
+}
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+
