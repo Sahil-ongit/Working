@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Belleza';
-  src: url('fonts/Belleza-Regular.ttf') format('truetype');
+  src: url('../fonts/Belleza-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,9 +38,18 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); opacity: 0.8; }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .Login-page .main-container {
@@ -91,39 +100,44 @@
   line-height: 1.2;
   margin-top: 3rem;
 }
+
 /* Custom offcanvas styling for mobile menu */
 .custom-offcanvas {
-  background-color: #0180FF;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .custom-offcanvas .offcanvas-title {
-  color: #fff;
+  color: #0180FF;
 }
 
 .custom-offcanvas .nav-link {
-  color: #fff !important;
+  color: #000000 !important;
 }
 
 .custom-offcanvas .nav-link:hover {
-  color: #dbeafe !important; /* lighter hover effect */
+  color: #dbeafe !important;
+  /* lighter hover effect */
 }
 
 .custom-offcanvas .btn-outline-light {
-  border-color: #fff;
-  color: #fff;
+  border-color: #000000;
+  color: #000000;
 }
 
 .custom-offcanvas .btn-outline-light:hover {
   background-color: #fff;
-  color: #0180FF;
+  color: #000000;
 }
+
 /* Active link color for desktop navbar */
 .navbar-custom .nav-link.active {
   font-weight: bold;
-  color: #0180FF !important; /* blue highlight */
+  color: #0180FF !important;
+  /* blue highlight */
   /* underline effect */
 }
+
 @media (max-width: 768px) {
   .custom-offcanvas .offcanvas-header {
     justify-content: center;
@@ -139,10 +153,12 @@
 
 /* iPad responsive adjustments */
 @media (min-width: 768px) and (max-width: 1199.98px) {
+
   /* Force offcanvas menu on tablets */
   .navbar-expand-xl .navbar-collapse {
     display: none !important;
   }
+
   .navbar-expand-xl .navbar-toggler {
     display: block !important;
   }
@@ -168,10 +184,13 @@
     width: 100%;
   }
 }
+
 /* Move "Empowering Future Medical Leader" text & images down */
 @media (max-width: 1199.98px) {
   .Login-page .image-column {
-    padding-bottom: 80px; /* adjust as needed */
+    padding-bottom: 80px;
+    height: 70vh;
+    /* adjust as needed */
   }
 }
 
@@ -179,16 +198,19 @@
 
 @media (max-width: 768px) {
   .mobile-btn-group {
-     /* white background */
+    /* white background */
     padding: 15px;
-    border-radius: 8px; /* optional rounded corners */
+    border-radius: 8px;
+    /* optional rounded corners */
     display: flex;
     flex-direction: column;
-    gap: 10px; /* gap between buttons */
+    gap: 10px;
+    /* gap between buttons */
   }
 
   .mobile-btn-group .btn {
-    width: 100%; /* same width */
+    width: 100%;
+    /* same width */
     text-align: center;
   }
 }
@@ -270,12 +292,13 @@
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
   .Login-page .image-column {
-    background-size: 50%;
+    background-size: 45%;
     background-position: center 70px;
     height: 50vh;
     padding: 1rem 1rem;
-    background-position: center 150px !important; /* push image down */
-  
+    background-position: center 150px !important;
+    /* push image down */
+
   }
 
   .Login-page .image-column::after {
@@ -284,8 +307,57 @@
 
   .Login-page .brand-name {
     font-size: 2rem;
+    text-align: center;
   }
 }
+
+
+
+/* Center "United Six" on iPad Air */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .Login-page .brand-name {
+
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Login-page .image-column {
+    background-size: 40%;
+  }
+
+}
+
+
+/* Tablet-specific layout fix for image-column */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .Login-page .image-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+    text-align: center;
+    padding: 2rem;
+  }
+
+
+  .Login-page .image-column h2 {
+    margin-bottom: 650px;
+    /* space between text and image */
+  }
+
+  .Login-page .image-column {
+    background-size: auto 500px;
+    /* adjust image size */
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+
 
 
 /* --- LANDING PAGE STYLES --- */
@@ -327,8 +399,8 @@
   padding: .25rem .5rem;
 }
 
-.nav-link.active{
-  color:#0180FF ;
+.nav-link.active {
+  color: #0180FF;
 }
 
 .Landing-page .nav-center .nav-link.active,
@@ -396,9 +468,29 @@
   object-fit: cover;
 }
 
+/* Default: large screens - right aligned */
 .Landing-page .progress-wrapper {
-  margin-left: 500px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-left: 0;
+  /* remove fixed offset */
 }
+
+/* Tablets and small desktops: center the progress circles */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .Landing-page .progress-wrapper {
+    justify-content: center;
+  }
+}
+
+/* Mobile: center them */
+@media (max-width: 767.98px) {
+  .Landing-page .progress-wrapper {
+    justify-content: center;
+  }
+}
+
 
 .Landing-page .search-box select,
 .Landing-page .search-box input {
@@ -563,7 +655,8 @@
     display: none !important;
   }
 }
-    /* --- General --- */
+
+/* --- General --- */
 .Landing-page .text-muted-white {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -685,6 +778,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -695,6 +789,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -713,23 +808,51 @@
 
 /* Keyframes */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-40px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInRight {
-  0% { opacity: 0; transform: translateX(40px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes zoomIn {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Initial hidden state */
@@ -738,10 +861,21 @@
 }
 
 /* Animation classes */
-.animate-up { animation: fadeInUp 1s ease forwards; }
-.animate-left { animation: fadeInLeft 1s ease forwards; }
-.animate-right { animation: fadeInRight 1s ease forwards; }
-.animate-zoom { animation: zoomIn 1s ease forwards; }
+.animate-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.animate-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.animate-zoom {
+  animation: zoomIn 1s ease forwards;
+}
 
 
 /* Responsive fixes for Landing-page */
@@ -791,13 +925,16 @@
     top: -30px;
   }
 }
+
 @media (max-width: 576px) {
   .Landing-page .feature-icon {
     width: 60px;
     height: 35px;
-    font-size: 0.9rem; /* shrink icon inside */
+    font-size: 0.9rem;
+    /* shrink icon inside */
   }
 }
+
 @media (max-width: 768px) {
   .Landing-page .footer-dark .d-flex {
     justify-content: center !important;
@@ -810,13 +947,87 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
+
   #trainerCarousel .carousel-item .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
     scroll-snap-align: start;
   }
 }
+
 .offcanvas {
   transition: transform 0.3s ease-in-out;
 }
 
+.Landing-page .brand-name {
+
+  font-family: 'Belleza', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 767.98px) {
+  .Landing-page .hero-img {
+    max-width: 300px;
+    /* limits width */
+    max-height: 300px;
+    /* limits height */
+    width: 100%;
+    height: auto;
+  }
+
+  /* Optional: center the image */
+  .Landing-page .hero-section .col-md-6:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Keep feature-icon same size on all screens & perfectly round */
+.Landing-page .feature-icon {
+  width: 50px;
+  height: 50px;
+  /* same width/height for perfect circle */
+  border-radius: 50%;
+  /* ensures it's round */
+  font-size: 1.4rem;
+  /* size of the icon inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* stops it from shrinking in flex layouts */
+}
+
+/* Default: desktop ≥1200px - align left */
+.Landing-page .footer-dark .d-flex.gap-2 {
+  justify-content: flex-start;
+}
+
+/* Tablets & small desktops: center the icons */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .Landing-page .footer-dark .d-flex.gap-2 {
+    justify-content: center !important;
+  }
+}
+
+
+
+.Landing-page .footer-dark .d-flex.gap-2 a img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* On hover: change color & slightly enlarge */
+.Landing-page .footer-dark .d-flex.gap-2 a:hover {
+  background-color: #0180FF;
+  /* blue */
+  transform: scale(1.1);
+}
+
+.Landing-page .footer-dark .d-flex.gap-2 a:hover img {
+  filter: brightness(0) invert(1);
+  /* make icon white */
+}
