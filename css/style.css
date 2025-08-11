@@ -165,7 +165,7 @@
 
   /* Center nav items in offcanvas for tablets */
   .custom-offcanvas .navbar-nav {
-    text-align: center;
+    text-align: start;
     width: 100%;
   }
 
@@ -189,7 +189,6 @@
 @media (max-width: 1199.98px) {
   .Login-page .image-column {
     padding-bottom: 80px;
-    height: 70vh;
     /* adjust as needed */
   }
 }
@@ -331,23 +330,7 @@
 
 
 /* Tablet-specific layout fix for image-column */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .Login-page .image-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* vertical center */
-    align-items: center;
-    /* horizontal center */
-    text-align: center;
-    padding: 2rem;
-  }
 
-
-  .Login-page .image-column h2 {
-    margin-bottom: 650px;
-    /* space between text and image */
-  }
 
   .Login-page .image-column {
     background-size: auto 500px;
@@ -355,7 +338,7 @@
     background-position: center;
     height: 100vh;
   }
-}
+
 
 
 
@@ -1024,7 +1007,7 @@
 .Landing-page .footer-dark .d-flex.gap-2 a:hover {
   background-color: #0180FF;
   /* blue */
-  transform: scale(1.1);
+  transform: scale(0.1rem);
 }
 
 .Landing-page .footer-dark .d-flex.gap-2 a:hover img {
@@ -1059,7 +1042,6 @@
   }
   
   .Login-page .image-column {
-    height: 100vh;
     background-size: 80%;
     background-position: center 500px;
     padding: 3rem 2rem;
@@ -1075,7 +1057,6 @@
   }
   
   .Login-page .form-column {
-    height: 100vh;
     padding: 3rem 2.5rem;
     display: flex;
     flex-direction: column;
@@ -1108,7 +1089,6 @@
   
   .Login-page .image-column,
   .Login-page .form-column {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1184,7 +1164,6 @@
 
   .Login-page .image-column,
   .Login-page .form-column {
-    height: 100vh;
     display: flex;
     align-items: center;
   }
@@ -1219,3 +1198,129 @@
     padding: 0rem 0;
   }
 }
+/* --- Login Page Height & Bottom Gap Fix --- */
+.Login-page .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Login-page .content-row {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.Login-page .form-column,
+.Login-page .image-column {
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.Login-page .login-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.Login-page .login-form-container {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Optional: Adjust image column background overlay to avoid extra gap */
+.Login-page .image-column::after {
+  height: auto;
+}
+
+
+
+  .Login-page .image-column h2 {
+    position: absolute;
+    top: 1.5rem; /* top position */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 2; /* keep above background */
+  }
+
+/* Always keep heading at the very top, like in the sample image */
+.Login-page .image-column {
+  position: relative;
+  display: block; /* remove flex alignment effects */
+}
+
+.Login-page .image-column h2 {
+  position: absolute;
+  top: 1rem; /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  font-size: 2rem; /* adjust for responsiveness if needed */
+  text-align: center;
+  z-index: 2;
+  width: 90%; /* prevent text overflow on small screens */
+}
+
+/* Mobile & Tablet — smaller image and heading at top */
+@media (max-width: 1199.98px) {
+  .Login-page .image-column {
+    background-size: 70%; /* reduce image size */
+    background-repeat: no-repeat;
+    background-position: center 50%; /* position image lower */
+    height: auto;
+    min-height: 65vh;
+    padding-top: 4rem;
+    position: relative;
+    display: block; /* avoid flex vertical centering */
+  }
+
+  .Login-page .image-column h2 {
+    position: absolute;
+    top: 1rem; /* top position */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+  }
+}
+
+/* Prevent scroll and fix both columns for Nest Hub (1024x600) */
+@media (width: 1024px) and (height: 600px) {
+  html, body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .Login-page {
+    display: flex;
+    height: 100vh; /* lock full page height */
+  }
+
+  .Login-page .image-column {
+    height: 100vh; /* fix left column height */
+    min-height: 100vh;
+    padding-top: 0; /* no extra vertical push */
+    background-position: center;
+  }
+
+  .Login-page .form-column {
+    height: 100vh; /* fix right column height */
+    overflow-y: auto;
+     padding-top: 0; /* no extra vertical push */
+    background-position: center;
+  }
+}
+
+
