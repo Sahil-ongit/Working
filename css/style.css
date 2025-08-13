@@ -94,7 +94,7 @@
 .Login-page .image-column h2 {
   font-family: 'Belleza', sans-serif;
   font-weight: normal;
-  font-size: calc(1.8rem + 2vw);
+  font-size: 5rem;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 1.2;
@@ -332,12 +332,12 @@
 /* Tablet-specific layout fix for image-column */
 
 
-  .Login-page .image-column {
-    background-size: auto 500px;
-    /* adjust image size */
-    background-position: center;
-    height: 100vh;
-  }
+.Login-page .image-column {
+  background-size: auto 500px;
+  /* adjust image size */
+  background-position: center;
+  height: 100vh;
+}
 
 
 
@@ -356,7 +356,7 @@
 }
 
 .Landing-page .navbar-brand {
-  font-family: "Playfair Display", serif;
+  font-family: "Belleza", serif;
   color: #1e90ff;
   font-size: 32px;
   letter-spacing: .2px;
@@ -781,8 +781,9 @@
 /* Default state before animation */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(20px);
 }
+
 
 /* Active animation state */
 .animate-active {
@@ -838,10 +839,6 @@
   }
 }
 
-/* Initial hidden state */
-.animate-on-scroll {
-  opacity: 0;
-}
 
 /* Animation classes */
 .animate-up {
@@ -1018,20 +1015,24 @@
 /* Fix gap for Nest Hub & similar screens */
 @media (min-width: 1024px) and (max-width: 1199.98px) {
   .Login-page .main-container {
-    min-height: auto; /* don't force full viewport height */
+    min-height: auto;
+    /* don't force full viewport height */
   }
 
   .Login-page .image-column,
   .Login-page .form-column {
-    height: auto; /* let them size naturally */
+    height: auto;
+    /* let them size naturally */
     display: flex;
-    align-items: center; /* vertically center content */
+    align-items: center;
+    /* vertically center content */
   }
 
   .Login-page .login-form-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-bottom: 0 auto; /* center inside form column */
+    margin-bottom: 0 auto;
+    /* center inside form column */
   }
 }
 
@@ -1040,7 +1041,7 @@
   .Login-page .main-container {
     min-height: 100vh;
   }
-  
+
   .Login-page .image-column {
     background-size: 80%;
     background-position: center 500px;
@@ -1049,26 +1050,26 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .Login-page .image-column h2 {
     font-size: 2.5rem;
     margin-top: 2rem;
     line-height: 1.2;
   }
-  
+
   .Login-page .form-column {
     padding: 3rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .Login-page .login-form-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 2rem 1rem;
   }
-  
+
   .Login-page .brand-name {
     font-size: 2.5rem;
     text-align: center;
@@ -1082,24 +1083,24 @@
     min-height: 100vh;
     height: 100vh;
   }
-  
+
   .Login-page .content-row {
     height: 100vh;
   }
-  
+
   .Login-page .image-column,
   .Login-page .form-column {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .Login-page .image-column {
     background-size: 40%;
     background-position: center;
     padding: 2rem;
   }
-  
+
   .Login-page .image-column h2 {
     font-size: 2rem;
     margin: 0;
@@ -1110,46 +1111,46 @@
     transform: translateX(-50%);
     width: 100%;
   }
-  
+
   .Login-page .form-column {
     padding: 2rem;
   }
-  
+
   .Login-page .login-wrapper {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
   }
-  
+
   .Login-page .login-form-container {
     padding: 1rem 0;
     margin: 0;
     max-width: none;
   }
-  
+
   .Login-page .login-form-container h1 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
   }
-  
+
   .Login-page .login-form-container .mb-4:first-child {
     margin-bottom: 2rem !important;
   }
-  
+
   .Login-page .login-form-container .mb-3 {
     margin-bottom: 1rem !important;
   }
-  
+
   .Login-page .brand-name {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
   }
-  
+
   .Login-page .form-control {
     padding: 0.5rem 0.75rem;
   }
-  
+
   .Login-page .btn-lg {
     padding: 0.75rem 1rem;
     font-size: 1rem;
@@ -1167,7 +1168,7 @@
     display: flex;
     align-items: center;
   }
-  
+
   .Login-page .image-column {
     justify-content: flex-start;
     flex-direction: column;
@@ -1175,7 +1176,7 @@
     background-position: center;
     padding: 2rem;
   }
-  
+
   .Login-page .image-column h2 {
     font-size: 1.8rem;
     margin: 0;
@@ -1186,18 +1187,19 @@
     text-align: center;
     width: 100%;
   }
-  
+
   .Login-page .form-column {
     justify-content: center;
     padding: 2rem;
   }
-  
+
   .Login-page .login-form-container {
     max-width: 380px;
     margin: 0 auto;
     padding: 0rem 0;
   }
 }
+
 /* --- Login Page Height & Bottom Gap Fix --- */
 .Login-page .main-container {
   min-height: 100vh;
@@ -1229,8 +1231,7 @@
 }
 
 .Login-page .login-form-container {
-  max-height: 90vh;
-  overflow-y: auto;
+  max-height: 100vh;
 }
 
 /* Optional: Adjust image column background overlay to avoid extra gap */
@@ -1240,52 +1241,62 @@
 
 
 
-  .Login-page .image-column h2 {
-    position: absolute;
-    top: 1.5rem; /* top position */
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-    z-index: 2; /* keep above background */
-  }
+.Login-page .image-column h2 {
+  position: absolute;
+  top: 1.5rem;
+  /* top position */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 2;
+  /* keep above background */
+}
 
 /* Always keep heading at the very top, like in the sample image */
 .Login-page .image-column {
   position: relative;
-  display: block; /* remove flex alignment effects */
+  display: block;
+  /* remove flex alignment effects */
 }
 
 .Login-page .image-column h2 {
   position: absolute;
-  top: 1rem; /* distance from top */
+  top: 1rem;
+  /* distance from top */
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
   padding: 0;
-  font-size: 2rem; /* adjust for responsiveness if needed */
+  font-size: 2rem;
+  /* adjust for responsiveness if needed */
   text-align: center;
   z-index: 2;
-  width: 90%; /* prevent text overflow on small screens */
+  width: 90%;
+  /* prevent text overflow on small screens */
 }
 
 /* Mobile & Tablet — smaller image and heading at top */
 @media (max-width: 1199.98px) {
   .Login-page .image-column {
-    background-size: 70%; /* reduce image size */
+    background-size: 70%;
+    /* reduce image size */
     background-repeat: no-repeat;
-    background-position: center 50%; /* position image lower */
+    background-position: center 50%;
+    /* position image lower */
     height: auto;
     min-height: 65vh;
     padding-top: 4rem;
     position: relative;
-    display: block; /* avoid flex vertical centering */
+    display: block;
+    /* avoid flex vertical centering */
   }
 
   .Login-page .image-column h2 {
     position: absolute;
-    top: 1rem; /* top position */
+    top: 1rem;
+    /* top position */
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -1298,29 +1309,193 @@
 
 /* Prevent scroll and fix both columns for Nest Hub (1024x600) */
 @media (width: 1024px) and (height: 600px) {
-  html, body {
+
+  html,
+  body {
     overflow: hidden;
     height: 100vh;
   }
 
   .Login-page {
     display: flex;
-    height: 100vh; /* lock full page height */
+    height: 100vh;
+    /* lock full page height */
   }
 
   .Login-page .image-column {
-    height: 100vh; /* fix left column height */
+    height: 100vh;
+    /* fix left column height */
     min-height: 100vh;
-    padding-top: 0; /* no extra vertical push */
+    padding-top: 0;
+    /* no extra vertical push */
     background-position: center;
   }
 
   .Login-page .form-column {
-    height: 100vh; /* fix right column height */
+    height: 100vh;
+    /* fix right column height */
     overflow-y: auto;
-     padding-top: 0; /* no extra vertical push */
+    padding-top: 0;
+    /* no extra vertical push */
     background-position: center;
   }
 }
 
 
+
+
+
+
+
+/* --- FACULTY DASHBOARD STYLES --- */
+
+
+
+.belleza-font {
+  font-family: 'Belleza', sans-serif;
+}
+
+.faculty-dashboard .navbar-brand {
+  font-family: 'Belleza', sans-serif;
+  color: #1e90ff;
+}
+
+.faculty-dashboard .navbar-nav .nav-link {
+  color: #222;
+  font-weight: 500;
+  padding: .25rem .5rem;
+
+}
+
+.faculty-dashboard .faculty-welcome-banner {
+  background-color: #0180FF;
+}
+.faculty-dashboard .faculty-banner-img {
+  max-height: 200px;
+}
+.faculty-dashboard .sidebar .nav-link {
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+.faculty-dashboard .sidebar .nav-link:hover {
+  background-color: #f0f4ff;
+}
+.faculty-dashboard .sidebar .nav-link.active {
+  background-color: #eaf2ff;
+  color: #0180FF;
+  font-weight: 600;
+}
+.faculty-dashboard .wave {
+  animation: wave-animation 1.5s infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.faculty-dashboard .card {
+  border-radius: 10px;
+}
+
+.faculty-dashboard .clickable-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.faculty-dashboard .clickable-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.faculty-dashboard .card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.faculty-dashboard .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+.faculty-dashboard .card-footer {
+  background: #fff;
+}
+
+.faculty-dashboard .my-courses {
+  font-family: 'Poppins', sans-serif;
+}
+
+.faculty-dashboard .my-courses {
+  font-family: 'Poppins', sans-serif;
+}
+
+.faculty-dashboard .my-courses .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.faculty-dashboard .my-courses .card-link:hover .card {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+.footer-dark {
+  background-color: #06080F;
+  color: #fff;
+}
+
+.footer-text-muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-dark .d-flex.gap-2 a img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-dark .d-flex.gap-2 a:hover {
+  background-color: #0180FF; /* blue hover background */
+  transform: scale(1.1);     /* enlarge slightly on hover */
+}
+
+.footer-dark .d-flex.gap-2 a:hover img {
+  filter: brightness(0) invert(1); /* make icon white on hover */
+}
+
+.brand-name {
+  font-family: 'Belleza', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* iPad, iPad Pro, and similar tablets — 1 card per row */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .my-courses .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================= */
+/* Faculty Dashboard Animations  */
+/* ============================= */
+.faculty-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.faculty-animate-active {
+  opacity: 1;
+  transform: translateY(0);
+}

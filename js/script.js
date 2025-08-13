@@ -105,6 +105,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// --- FACULTY DASHBOARD PAGE SCRIPT --- //
 
+
+// --- FACULTY DASHBOARD SCROLL ANIMATION ---
+document.addEventListener("DOMContentLoaded", function () {
+  const fdElements = document.querySelectorAll(".faculty-animate");
+
+  const fdObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("faculty-animate-active");
+        fdObserver.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fdElements.forEach(el => {
+    // Animate immediately if already in view
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      el.classList.add("faculty-animate-active");
+    } else {
+      fdObserver.observe(el);
+    }
+  });
+});
 
     
