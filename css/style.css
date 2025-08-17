@@ -1361,7 +1361,6 @@
 }
 
 .faculty-dashboard .navbar-nav .nav-link {
-  color: #222;
   font-weight: 500;
   padding: .25rem .5rem;
 
@@ -1370,37 +1369,66 @@
 .faculty-dashboard .faculty-welcome-banner {
   background-color: #0180FF;
 }
+
 .faculty-dashboard .faculty-banner-img {
   max-height: 200px;
 }
+
 .faculty-dashboard .sidebar .nav-link {
   color: #333;
   border-radius: 8px;
   padding: 8px 12px;
   font-weight: 500;
 }
+
 .faculty-dashboard .sidebar .nav-link:hover {
   background-color: #f0f4ff;
 }
+
 .faculty-dashboard .sidebar .nav-link.active {
   background-color: #eaf2ff;
   color: #0180FF;
   font-weight: 600;
 }
+
 .faculty-dashboard .wave {
   animation: wave-animation 1.5s infinite;
   display: inline-block;
   transform-origin: 70% 70%;
 }
+
 @keyframes wave-animation {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .faculty-dashboard .card {
@@ -1413,17 +1441,19 @@
 
 .faculty-dashboard .clickable-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .faculty-dashboard .card {
   border-radius: 10px;
   overflow: hidden;
 }
+
 .faculty-dashboard .card-img-top {
   height: 180px;
   object-fit: cover;
 }
+
 .faculty-dashboard .card-footer {
   background: #fff;
 }
@@ -1447,6 +1477,7 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease-in-out;
 }
+
 .footer-dark {
   background-color: #06080F;
   color: #fff;
@@ -1463,12 +1494,15 @@
 }
 
 .footer-dark .d-flex.gap-2 a:hover {
-  background-color: #0180FF; /* blue hover background */
-  transform: scale(1.1);     /* enlarge slightly on hover */
+  background-color: #0180FF;
+  /* blue hover background */
+  transform: scale(1.1);
+  /* enlarge slightly on hover */
 }
 
 .footer-dark .d-flex.gap-2 a:hover img {
-  filter: brightness(0) invert(1); /* make icon white on hover */
+  filter: brightness(0) invert(1);
+  /* make icon white on hover */
 }
 
 .brand-name {
@@ -1479,7 +1513,7 @@
 
 /* iPad, iPad Pro, and similar tablets — 1 card per row */
 @media (min-width: 768px) and (max-width: 1199.98px) {
-  .my-courses .row > [class*="col-"] {
+  .my-courses .row>[class*="col-"] {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1498,4 +1532,42 @@
 .faculty-animate-active {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+
+
+/* ============================= */
+/* Course Details Styles       */
+/* ============================= */
+
+
+
+.course-details .navbar-brand {
+  font-family: 'Belleza', sans-serif;
+  color: #1e90ff;
+}
+
+
+.course-details .navbar-nav .nav-link {
+  font-weight: 500;
+  padding: .25rem .5rem;
+
+}
+
+/* ============================= */
+/* Course Edit Styles       */
+/* ============================= */
+
+
+.course-edit .navbar-brand {
+  font-family: 'Belleza', sans-serif;
+  color: #1e90ff;
+}
+
+
+.course-edit .navbar-nav .nav-link {
+  font-weight: 500;
+  padding: .25rem .5rem;
+
 }

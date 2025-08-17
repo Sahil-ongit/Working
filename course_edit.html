@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Edit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="course-edit">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-light bg-white navbar-custom py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Brand -->
+            <a class="navbar-brand fw-bold belleza-font  me-auto fs-3" href="#">United Six</a>
+
+            <!-- Burger button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu (Mobile, Tablets, and iPads) -->
+            <div class="offcanvas offcanvas-start d-xl-none custom-offcanvas" tabindex="-1" id="mobileMenu"
+                aria-labelledby="mobileMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title mx-auto navbar-brand belleza-font text-primary" id="mobileMenuLabel">
+                        United Six
+                    </h5>
+                    <button type="button" class="btn-close btn-close-dark text-reset position-absolute end-0 me-3"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active text-primary" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex flex-column gap-2 mt-3 mobile-btn-group">
+                        <a class="btn btn-outline-light btn-pill w-100" href="#">Teach on United Six</a>
+                        <a class="btn btn-primary text-white btn-pill w-100" href="#">Login As Student</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Menu (Only ≥1200px) -->
+            <div class="collapse navbar-collapse d-none d-xl-flex justify-content-center flex-grow-1">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Desktop Profile Dropdown -->
+            <div class="d-none d-xl-flex align-items-center gap-2 ms-auto dropdown">
+                <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="profileDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/Avatar 48.png" alt="Profile" class="rounded-circle me-2"
+                        style="width: 32px; height: 32px; object-fit: cover;">
+                    <span class="fw-medium">Rajiv Menon</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <!-- Edit Course Header -->
+        <div class="bg-primary text-white px-3 py-2 rounded">
+            Edit Course
+        </div>
+
+        <!-- Edit Course Form -->
+        <form class="border rounded p-3 mt-3 shadow-sm">
+            <!-- Course Name & Description -->
+            <div class="mb-3">
+                <label for="courseName" class="form-label">Course Name</label>
+                <input type="text" class="form-control" id="courseName" placeholder="Enter course name"
+                    value="Cardiology Series">
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="2">cardio</textarea>
+            </div>
+
+            <!-- Category & Course Type -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="category">
+                        <option selected>Cardiology</option>
+                        <option>Neurology</option>
+                        <option>Orthopedics</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="courseType" class="form-label">Course Type</label>
+                    <select class="form-select" id="courseType">
+                        <option selected>Series</option>
+                        <option>Single</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Start Date & End Date -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="startDate" class="form-label">Start Date</label>
+                    <input type="datetime-local" class="form-control" id="startDate" value="2025-08-12T12:06">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="endDate" class="form-label">End Date</label>
+                    <input type="datetime-local" class="form-control" id="endDate" value="2025-08-12T12:10">
+                </div>
+            </div>
+
+            <!-- Section Divider -->
+            <h5 class="mt-4 mb-3 border-bottom pb-2">Course Sessions</h5>
+
+            <!-- Session Example -->
+            <div id="sessions">
+                <div class="session border rounded p-3 mb-3">
+                    <div class="mb-3">
+                        <label for="sessionName" class="form-label">Session Name</label>
+                        <input type="text" class="form-control" id="sessionName" value="Cardiology part 1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sessionDescription" class="form-label">Session Description</label>
+                        <textarea class="form-control" id="sessionDescription"
+                            rows="2">This is a cardiology part 1</textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="sessionStartDate" class="form-label">Start Date</label>
+                            <input type="datetime-local" class="form-control" id="sessionStartDate"
+                                value="2025-08-12T12:06">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="sessionEndDate" class="form-label">End Date</label>
+                            <input type="datetime-local" class="form-control" id="sessionEndDate"
+                                value="2025-08-12T12:10">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="sessionImage" class="form-label">Session Image</label>
+                        <input type="file" class="form-control" id="sessionImage">
+                        <div class="mt-2">
+                            <img src="images/Cardiology_new.png" alt="Session Preview"
+                                class="img-fluid rounded shadow-sm" style="max-width: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Session Button -->
+            <button type="button" class="btn btn-outline-primary mb-4" id="addSession">
+                + Add Session
+            </button>
+
+            <!-- Course Thumbnail -->
+            <div class="mb-3">
+                <label for="courseThumbnail" class="form-label">Course Thumbnail</label>
+                <div class="mb-2">
+                    <img src="images/Cardiology and Heart Diseases.png" alt="Course Thumbnail" class="img-fluid rounded shadow-sm"
+                        style="max-width: 250px;">
+                </div>
+                <input type="file" class="form-control" id="courseThumbnail">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        // Example JS for dynamically adding session blocks
+        document.getElementById("addSession").addEventListener("click", function () {
+            const sessionTemplate = document.querySelector(".session").cloneNode(true);
+            sessionTemplate.querySelectorAll("input, textarea").forEach(el => el.value = "");
+            document.getElementById("sessions").appendChild(sessionTemplate);
+        });
+    </script>
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 footer-dark ">
+        <div class="container text-lg-start text-center faculty-animate">
+            <div class="row">
+
+                <!-- Left Column -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold brand-name">United Six</h5>
+                    <p class="small footer-text-muted">
+                        We are providing high-quality courses for about <br> ten years.
+                    </p>
+                    <div class="d-flex gap-2 justify-content-lg-start justify-content-center">
+                        <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+                            <img alt="Facebook" class="img-fluid" src="images/Link - hims on Facebook.png" />
+                        </a>
+                        <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+                            <img alt="Twitter" class="img-fluid" src="images/Link - hims on Twitter.png" />
+                        </a>
+                        <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+                            <img alt="Instagram" class="img-fluid" src="images/Link - hims on Instagram.png" />
+                        </a>
+                        <a class="d-flex align-items-center justify-content-center rounded-circle" href="#">
+                            <img alt="TikTok" class="img-fluid" src="images/Link - hims on TikTok.png" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Middle Column -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-3">Sitemap</h6>
+                    <ul class="list-unstyled small">
+                        <li><a class="text-white text-decoration-none" href="#">Courses</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Login As Student</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Teach on United Six</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Support / Help</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Need help?</h6>
+                    <p class="small mb-1">Call us directly?</p>
+                    <p class="fw-bold mb-2">
+                        +1 234 567 8910
+                        <span class="badge bg-danger ms-1">FREE</span>
+                    </p>
+                    <p class="small mb-1">Need support?</p>
+                    <a class="text-white small text-decoration-underline"
+                        href="mailto:help@lorem.com">help@lorem.com</a>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-secondary mt-4" />
+
+            <!-- Bottom Copyright -->
+            <div
+                class="pt-3 d-flex align-items-center text-lg-start text-center small justify-content-between footer-text-muted flex-column flex-md-row">
+                <p class="mb-0">© 2025 United Six is Proudly Powered by
+                    <a class="text-white text-decoration-underline" href="#">ENS Consultants</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
