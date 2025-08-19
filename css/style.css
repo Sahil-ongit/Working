@@ -12,6 +12,34 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'SpaceGrotesk-Regular';
+  src: url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.badge-one-time {
+  display: inline-block;
+  background-color: #E0F7FA;   /* light cyan */
+  color: #007C91;              /* teal text */
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 50px;         /* pill shape */
+}
+.badge-series {
+  display: inline-block;
+  background-color: #F3E5F5;   /* lavender */
+  color: #6A1B9A;              /* deep purple */
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 50px;         /* pill shape */
+}
+
+
 .Login-page #loader {
   position: fixed;
   width: 100%;
@@ -25,6 +53,8 @@
   z-index: 9999;
   transition: opacity 0.75s, visibility 0.75s;
 }
+
+
 
 .Login-page #loader.hidden {
   opacity: 0;
@@ -99,6 +129,12 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 1.2;
   margin-top: 3rem;
+}
+
+
+.Landing-page .step-number
+{
+  font-family: 'SpaceGrotesk-Regular', sans-serif;
 }
 
 /* Custom offcanvas styling for mobile menu */
@@ -392,6 +428,44 @@
   text-decoration: none;
 }
 
+.price-badge {
+  position: absolute;
+  bottom: -10px;
+  /* push it down from bottom of image */
+  left: 10px;
+  /* keep it near left edge */
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 50px;
+  z-index: 2;
+  /* keep above image */
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+  .price-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    bottom: -10px;
+    left: 8px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 991px) {
+  .price-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+    bottom: -10px;
+    left: 9px;
+  }
+}
+
+
+
+
 .Landing-page .btn-pill {
   border-radius: 999px;
   padding: .45rem 1.1rem;
@@ -676,14 +750,62 @@
 
 /* --- Search Section --- */
 .Landing-page .search-section {
-  margin-top: -50px;
+  margin-top: -65px;
   position: relative;
   z-index: 5;
 }
+.hero-section {
+  min-height: 80vh;
+  padding: 4rem 0;
+}
+
+
+/* Base arrow button */
+.custom-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  top: 45%;
+  transform: translateY(-50%);
+  opacity: 1; /* always visible */
+}
+
+/* Positioning */
+.carousel-control-prev.custom-arrow {
+  left: -20px; /* pull outside carousel slightly */
+}
+.carousel-control-next.custom-arrow {
+  right: -20px;
+}
+
+/* Arrow symbol */
+.custom-arrow .arrow-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+}
+
+/* Hover effect */
+.custom-arrow:hover {
+  background: #f0f0f0;
+}
+
+
+
+
+
+
 
 /* --- Headings with Playfair --- */
 .Landing-page .heading-playfair {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Belleza', serif;
 }
 
 /* --- Feature Icon --- */
@@ -707,8 +829,11 @@
 
 /* --- Gradient Box --- */
 .Landing-page .gradient-box {
-  background: linear-gradient(to right, #f8f9fa, #f0f4ff);
+  background: linear-gradient(to right, #f2fcfc, #f5ffff);
+  
 }
+
+
 
 /* --- Decorative Image --- */
 .Landing-page .decorative-icon {
