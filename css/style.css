@@ -2,7 +2,7 @@
 
 .Login-page body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f8fafc;
 }
 
 @font-face {
@@ -428,6 +428,84 @@
   text-decoration: none;
 }
 
+
+/* Faculty Dashboard Background */
+.Landing-page .featured-courses {
+  background-color: #f8fafc;
+}
+
+
+/* Button look */
+.custom-bs-select {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.custom-bs-select:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.2);
+}
+
+/* Dropdown menu */
+.custom-bs-menu {
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Items */
+.custom-bs-menu .dropdown-item {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #111827;
+  transition: background .15s, color .15s;
+}
+
+/* Active (selected item) */
+.custom-bs-menu .dropdown-item.active,
+.custom-bs-menu .dropdown-item:active {
+  background-color: #fdecec; /* light red background */
+  color: #dc2626;            /* red text */
+  font-weight: 600;
+}
+
+/* Hover */
+
+
+
+/* Hover effect for dropdown items */
+.custom-bs-menu .dropdown-item:hover {
+  background-color: #fdecec; /* light gray background */
+  color: #dc2626;            /* dark text */
+}
+
+/* Keep active item in red, even on hover */
+.custom-bs-menu .dropdown-item.active,
+.custom-bs-menu .dropdown-item.active:hover {
+  background-color: #fdecec; /* light red background */
+  color: #dc2626;            /* red text */
+  font-weight: 600;
+}
+
+/* Align Bootstrap dropdown toggle caret at the far right */
+.custom-bs-select.dropdown-toggle::after {
+  position: absolute;
+  right: 16px;      /* space from right edge */
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+}
+
+
+
 .price-badge {
   position: absolute;
   bottom: -10px;
@@ -666,6 +744,9 @@
   z-index: 1;
 }
 
+
+
+
 /* Trainer image box */
 .Landing-page .trainer-card .img-wrapper {
   height: 300px;
@@ -829,7 +910,7 @@
 
 /* --- Gradient Box --- */
 .Landing-page .gradient-box {
-  background: linear-gradient(to right, #f2fcfc, #f5ffff);
+  background: linear-gradient(to bottom, #f2fcfc, #ffffff);
   
 }
 
@@ -1474,6 +1555,120 @@
 
 /* --- FACULTY DASHBOARD STYLES --- */
 
+/* Faculty Dashboard Background */
+.faculty-dashboard {
+  background-color: #f8fafc;
+}
+
+.container .faculty-dashboard {
+  background-color: transparent !important;
+}
+
+
+
+/* Hide Bootstrap’s default caret */
+#profileDropdown::after {
+  display: none !important;
+}
+
+/* Style the custom chevron */
+#profileDropdown .custom-chevron {
+  width: 14px;         /* adjust size */
+  height: auto;
+  margin-left: 6px;    /* spacing from name */
+  transition: transform 0.2s ease;
+}
+
+/* Rotate the chevron when dropdown is open */
+#profileDropdown[aria-expanded="true"] .custom-chevron {
+  transform: rotate(180deg);
+}
+
+
+/* Make sidebar full height so divider reaches bottom */
+.faculty-dashboard .row {
+  align-items: stretch; /* make columns equal height */
+}
+
+.faculty-dashboard-sidebar {
+  border-right: 1px solid #e5e7eb; /* subtle divider */
+  height: 100%; /* stretch full height */
+  box-shadow: none !important;
+}
+
+/* Responsive: remove divider on small screens */
+@media (max-width: 991.98px) {
+  .faculty-dashboard-sidebar {
+    border-right: 1px solid #e5e7eb !important;
+    height: 100%; /* allow natural height on mobile */
+  }
+}
+
+/* Default: subtle full-width divider */
+.section-divider {
+  
+  border-top: 2px solid #e5e7eb;
+  margin: rem 0 1rem;
+  width: 50vw;          /* full viewport width */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* center it */
+}
+
+
+/* Tablet: a little less margin */
+@media (max-width: 991.98px) {
+  .section-divider {
+    margin: 1.5rem 0 1rem;
+  }
+}
+
+/* Mobile: keep it compact */
+@media (max-width: 576px) {
+  .section-divider {
+    margin: 1rem 0 0.75rem;
+  }
+}
+
+
+.faculty-dashboard-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #212529;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.faculty-dashboard-sidebar .nav-link img {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Active + Hover State */
+.faculty-dashboard-sidebar .nav-link:hover,
+.faculty-dashboard-sidebar .nav-link.active {
+  background-color: #eaf4ff;   /* light blue background */
+  color: #007bff !important;   /* Bootstrap blue text */
+  font-weight: 600;
+  position: relative;
+}
+
+/* Red left border bar */
+.faculty-dashboard-sidebar .nav-link:hover::before,
+.faculty-dashboard-sidebar .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #d9534f; /* red */
+  border-radius: 4px 0 0 4px;
+}
+
 
 
 .belleza-font {
@@ -1666,7 +1861,10 @@
 /* Course Details Styles       */
 /* ============================= */
 
-
+/* Course Details Background */
+.course-details {
+  background-color: #f8fafc;
+}
 
 .course-details .navbar-brand {
   font-family: 'Belleza', sans-serif;
@@ -1683,6 +1881,12 @@
 /* ============================= */
 /* Course Edit Styles       */
 /* ============================= */
+
+/* Course Edit Background */
+.course-edit {
+  background-color: #f8fafc;
+}
+
 
 
 .course-edit .navbar-brand {

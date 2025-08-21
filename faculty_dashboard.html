@@ -65,10 +65,18 @@
       <div class="d-none d-xl-flex align-items-center gap-2 ms-auto dropdown">
         <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="profileDropdown"
           data-bs-toggle="dropdown" aria-expanded="false">
+
+          <!-- Avatar -->
           <img src="images/Avatar 48.png" alt="Profile" class="rounded-circle me-2"
             style="width: 32px; height: 32px; object-fit: cover;">
+
+          <!-- Username -->
           <span class="fw-medium text-dark">Rajiv Menon</span>
+
+          <!-- Custom Chevron -->
+          <img src="images/chevron-down.png" alt="▼" class="custom-chevron">
         </a>
+
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
           <li><a class="dropdown-item" href="#">My Profile</a></li>
           <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -79,10 +87,11 @@
         </ul>
       </div>
 
+
     </div>
   </nav>
 
-  <div class="container my-4 ">
+  <div class="container my-4  ">
     <div class="card border-0 shadow-sm faculty-animate">
       <div class="card-body p-4 text-white rounded faculty-welcome-banner">
         <div class="row align-items-center">
@@ -107,331 +116,361 @@
     </div>
     <br>
 
-    <div class="container-fluid faculty-dashboard">
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 mb-3">
-          <div class="faculty-dashboard-sidebar p-3 bg-white shadow-sm rounded faculty-animate">
-            <!-- Profile -->
-            <div class="text-center mb-4">
-              <img src="images/Avatar.png" alt="Profile" class="rounded-circle mb-2" width="80" height="80"
-                style="object-fit:cover;">
-              <h6 class="mb-0 fw-bold">Rajiv Menon</h6>
-              <small class="text-muted">rajiv123@gmail.com</small>
-              <div class="mt-3">
-                <button class="btn btn-outline-primary btn-sm w-100">
-                  <i class="bi bi-plus-lg me-1"></i> Create New Course
-                </button>
-              </div>
-            </div>
-            <!-- Nav Links -->
-            <ul class="nav flex-column gap-1">
-              <li><a href="#" class="nav-link active"><img src="images/grid-01.png" alt=""> Dashboard</a></li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/book-closed.png" alt=""> My Courses</a></li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/clock-check.png" alt=""> Upcoming Sessions</a>
-              </li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/graduation-hat-01.png" alt=""> Students
-                  Enrolled</a></li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/line-chart-up-04.png" alt=""> Earnings</a>
-              </li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/Frame 1707481758.png" alt=""> My Profile</a>
-              </li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/paper money notes as a legal tender(1) 1.png"
-                    alt=""> Payments</a></li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/Wallet_alt.png" alt=""> My Wallet</a></li>
-              <li><a href="#" class="nav-link text-dark"><img src="images/file-03.png" alt=""> Reports</a></li>
-              <li class="mt-2"><a href="#" class="nav-link text-danger"><img src="images/log-out-03.png" alt="">
-                  Logout</a></li>
-            </ul>
-          </div>
-        </div>
 
-        <!-- Main Content Placeholder -->
-        <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
-          <div class="p-3">
-            <div class="container-fluid faculty-dashboard faculty-animate">
-              <div class="row g-3">
 
-                <!-- Total Courses -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="total-courses.html" class="text-decoration-none text-dark">
-                    <div
-                      class="card shadow-sm border-0 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
-                      <div class="d-flex align-items-center">
-                        <img src="images/Group 1000013693.png" alt="" class="me-2" height="40" width="40">
-                        <span class="fw-semibold">Total Courses</span>
-                      </div>
-                      <span class="badge bg-danger rounded-pill">25</span>
-                    </div>
-                  </a>
+    <div class="container py-4">
+      <div class="bg-white shadow-sm rounded p-3">
+        <div class="container-fluid faculty-dashboard">
+          <div class="row">
+
+            <div class="col-xl-3 col-lg-4 col-md-5 col-sm-12 mb-3">
+              <div class="faculty-dashboard-sidebar p-3 bg-white  faculty-animate">
+                <!-- Profile -->
+                <div class="text-center mb-4">
+                  <img src="images/Avatar.png" alt="Profile" class="rounded-circle mb-2" width="100" height="100"
+                    style="object-fit:cover;">
+                  <h6 class="mb-0 fw-bold">Rajiv Menon</h6>
+                  <small class="text-muted">rajiv123@gmail.com</small>
+                  <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-90 fs-6">
+                      <img src="images/Blue_plus.png" alt="" height="20px"> Create New Course
+                    </button>
+                  </div>
                 </div>
-
-                <!-- Upcoming Sessions -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="upcoming-sessions.html" class="text-decoration-none text-dark">
-                    <div
-                      class="card shadow-sm border-0 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
-                      <div class="d-flex align-items-center">
-                        <img src="images/Group 1000013693 (1).png" alt="" class="me-2" height="40" width="40">
-                        <span class="fw-semibold">Upcoming Sessions</span>
-                      </div>
-                      <span class="badge bg-danger rounded-pill">15</span>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Students Enrolled -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="students-enrolled.html" class="text-decoration-none text-dark">
-                    <div
-                      class="card shadow-sm border-0 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
-                      <div class="d-flex align-items-center">
-                        <img src="images/Group 1000013693 (2).png" alt="" class="me-2" height="40" width="40">
-                        <span class="fw-semibold">Students Enrolled</span>
-                      </div>
-                      <span class="badge bg-danger rounded-pill">25</span>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Earnings This Month -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="earnings.html" class="text-decoration-none text-dark">
-                    <div class="card shadow-sm border-0 h-100 p-3 clickable-card">
-                      <div class="fw-bold text-muted">Earnings This Month</div>
-                      <div class="d-flex align-items-center mt-2">
-                        <h5 class="mb-0 fs-6 me-2">20,000.00</h5>
-                        <small class="text-success fw-bold">+18.34% <i class="bi bi-graph-up-arrow me-4"></i></small>
-
-                        <img src="images/Line Chart.png" alt="Graph" class="img-fluid" style="max-height:30px;">
-                      </div>
-                    </div>
-
-                  </a>
-                </div>
-
-                <!-- My Students - Course Wise -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="students-coursewise.html" class="text-decoration-none text-dark">
-                    <div
-                      class="card shadow-sm border-0 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
-                      <div class="d-flex align-items-center">
-                        <img src="images/Group 1000013693 (3).png" alt="" class="me-2" height="40" width="40">
-                        <span class="fw-semibold">My Students-Course Wise</span>
-                      </div>
-                      <i class="bi bi-chevron-right text-primary"></i>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Zoom Account Settings -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="zoom-settings.html" class="text-decoration-none text-dark">
-                    <div
-                      class="card shadow-sm border-0 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
-                      <div class="d-flex align-items-center">
-                        <img src="images/zoom-app 1.png" alt="" class="me-2" height="40" width="40">
-                        <span class="fw-semibold">Zoom Account Settings</span>
-                      </div>
-                      <i class="bi bi-chevron-right text-primary"></i>
-                    </div>
-                  </a>
-                </div>
-
+                <!-- Nav Links -->
+                <ul class="nav flex-column gap-1">
+                  <li><a href="#" class="nav-link active"><img src="images/grid-01.png" alt=""> Dashboard</a></li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/book-closed.png" alt=""> My Courses</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/clock-check.png" alt=""> Upcoming
+                      Sessions</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/graduation-hat-01.png" alt=""> Students
+                      Enrolled</a></li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/line-chart-up-04.png" alt=""> Earnings</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/Frame 1707481758.png" alt=""> My
+                      Profile</a>
+                  </li>
+                  <li><a href="#" class="nav-link text-dark"><img
+                        src="images/paper money notes as a legal tender(1) 1.png" alt=""> Payments</a></li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/Wallet_alt.png" alt=""> My Wallet</a></li>
+                  <li><a href="#" class="nav-link text-dark"><img src="images/file-03.png" alt=""> Reports</a></li>
+                  <li class="mt-2"><a href="#" class="nav-link text-danger"><img src="images/log-out-03.png" alt="">
+                      Logout</a></li>
+                </ul>
               </div>
             </div>
 
-            <div class="container-fluid faculty-dashboard mt-4 my-courses ">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5 class="mb-0 fs-5 fw-semibold">My Courses</h5>
-                <a href="all-courses.html" class="text-primary small fw-bold text-decoration-none">
-                  View All <i class="bi bi-chevron-right"></i>
-                </a>
-              </div>
+            <!-- Main Content Placeholder -->
+            <div class="col-xl-9 col-lg-8 col-md-7 col-sm-12">
+              <div class="p-3">
+                <div class="container-fluid faculty-dashboard faculty-animate">
+                  <div class="row g-3">
 
-              <div class="row g-4 faculty-animate">
-
-                <!-- Pediatric Growth & Nutrition -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <a href="course-details.html" class="card-link text-decoration-none">
-                    <div class="card border-0 shadow-sm h-100 d-flex flex-column">
-
-                      <!-- Course Image -->
-                      <img src="images/Pediatric growth and Nutrition.png" class="card-img-top img-fluid"
-                        alt="Pediatric Growth & Nutrition">
-
-                      <!-- Card Body -->
-                      <div class="card-body d-flex flex-column">
-                        <h6 class="fs-6 fw-bold mb-2">Pediatric Growth & Nutrition</h6>
-
-                        <small class="text-muted d-block mb-1">Starts on:</small>
-                        <div class="text-dark small mb-1">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                    <!-- Total Courses -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="total-courses.html" class="text-decoration-none text-dark">
+                        <div
+                          class="card  border-1 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
+                          <div class="d-flex align-items-center">
+                            <img src="images/Group 1000013693.png" alt="" class="me-2" height="40" width="40">
+                            <span class="fw-semibold">Total Courses</span>
+                          </div>
+                          <span class="badge bg-danger rounded-pill">25</span>
                         </div>
-
-                        <div class="text-dark small">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-
-                      <!-- Card Footer -->
-                      <div
-                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
+                      </a>
                     </div>
-                  </a>
+
+                    <!-- Upcoming Sessions -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="upcoming-sessions.html" class="text-decoration-none text-dark">
+                        <div
+                          class="card  border-1 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
+                          <div class="d-flex align-items-center">
+                            <img src="images/Group 1000013693 (1).png" alt="" class="me-2" height="40" width="40">
+                            <span class="fw-semibold">Upcoming Sessions</span>
+                          </div>
+                          <span class="badge bg-danger rounded-pill">15</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Students Enrolled -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="students-enrolled.html" class="text-decoration-none text-dark">
+                        <div
+                          class="card  border-1 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
+                          <div class="d-flex align-items-center">
+                            <img src="images/Group 1000013693 (2).png" alt="" class="me-2" height="40" width="40">
+                            <span class="fw-semibold">Students Enrolled</span>
+                          </div>
+                          <span class="badge bg-danger rounded-pill">25</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Earnings This Month -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="earnings.html" class="text-decoration-none text-dark">
+                        <div class="card  border-1 h-100 p-3 clickable-card">
+                          <div class="fw-bold text-muted">Earnings This Month</div>
+                          <div class="d-flex align-items-center mt-2">
+                            <h5 class="mb-0 fs-6 me-2">20,000.00</h5>
+                            <small class="text-success fw-bold">+18.34% <i
+                                class="bi bi-graph-up-arrow me-4"></i></small>
+
+                            <img src="images/Line Chart.png" alt="Graph" class="img-fluid" style="max-height:30px;">
+                          </div>
+                        </div>
+
+                      </a>
+                    </div>
+
+                    <!-- My Students - Course Wise -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="students-coursewise.html" class="text-decoration-none text-dark">
+                        <div
+                          class="card  border-1 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
+                          <div class="d-flex align-items-center">
+                            <img src="images/Group 1000013693 (3).png" alt="" class="me-2" height="40" width="40">
+                            <span class="fw-semibold">My Students-Course Wise</span>
+                          </div>
+                          <i class="bi bi-chevron-right text-primary"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Zoom Account Settings -->
+                    <div class="col-lg-4 col-md-12">
+                      <a href="zoom-settings.html" class="text-decoration-none text-dark">
+                        <div
+                          class="card  border-1 h-100 p-3 d-flex flex-row align-items-center justify-content-between clickable-card">
+                          <div class="d-flex align-items-center">
+                            <img src="images/zoom-app 1.png" alt="" class="me-2" height="40" width="40">
+                            <span class="fw-semibold">Zoom Account Settings</span>
+                          </div>
+                          <i class="bi bi-chevron-right text-primary"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
                 </div>
 
+                <hr class="section-divider">
 
-                <!-- Advances in Cardiology -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <a href="course-details.html" class="card-link text-decoration-none">
-                    <div class="card border-0 shadow-sm h-100 d-flex flex-column">
+                <div class="container-fluid faculty-dashboard mt-4 my-courses">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0 fs-5 fw-semibold">My Courses</h5>
+                    <a href="all-courses.html" class="text-primary small fw-bold text-decoration-none">
+                      View All <i class="bi bi-chevron-right"></i>
+                    </a>
+                  </div>
 
-                      <!-- Course Image -->
-                      <img src="images/Container (6).png" class="card-img-top img-fluid" alt="Advances in Cardiology">
 
-                      <!-- Card Body -->
-                      <div class="card-body d-flex flex-column">
-                        <h6 class="fw-bold mb-2">Advances in Cardiology</h6>
+                  <div class="row g-4 faculty-animate">
 
-                        <small class="text-muted d-block mb-1">Starts on:</small>
-                        <div class="text-dark small mb-1">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                    <!-- Pediatric Growth & Nutrition -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/Pediatric growth and Nutrition.png" class="card-img-top img-fluid"
+                            alt="Pediatric Growth & Nutrition">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">Pediatric Growth & Nutrition</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
                         </div>
-
-                        <div class="text-dark small">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-
-                      <!-- Card Footer -->
-                      <div
-                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
+                      </a>
                     </div>
-                  </a>
+
+                    <!-- Advances in Cardiology -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/Container (6).png" class="card-img-top img-fluid"
+                            alt="Advances in Cardiology">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">Advances in Cardiology</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Cardiology and Heart Diseases -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/Cardiology and Heart Diseases.png" class="card-img-top img-fluid"
+                            alt="Cardiology and Heart Diseases">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">Cardiology and Heart Disease</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Gynecology and Obstetrics -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/Gynecology.png" class="card-img-top img-fluid"
+                            alt="Gynecology and Obstetrics">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">Gynecology and Obstetrics</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- General Surgery -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/General Surgery.png" class="card-img-top img-fluid" alt="General Surgery">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">General Surgery, including</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Dermagnostix Webinar Series -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <a href="course-details.html" class="card-link text-decoration-none">
+                        <div class="card border-1 h-100 d-flex flex-column">
+                          <img src="images/Dermagnostic webinar.png" class="card-img-top img-fluid"
+                            alt="Dermagnostix Webinar Series">
+
+                          <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold mb-2">Dermagnostix Webinar Series</h6>
+
+                            <small class="text-muted d-block mb-1">Starts on:</small>
+                            <div class="text-dark small mb-1">
+                              <i class="bi bi-calendar3 me-1"></i> 22 July 2025
+                              <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
+                            </div>
+
+                            <div class="text-dark small">
+                              <i class="bi bi-camera-video me-1"></i> 1 Session
+                            </div>
+
+                            <hr class="my-3">
+                          </div>
+
+                          <div
+                            class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
+                            <span class="badge-one-time">One-time</span>
+                            <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
                 </div>
 
-
-                <!-- Cardiology and Heart Diseases -->
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                  <a href="course-details.html" class="card-link text-decoration-none">
-                    <div class="card border-0 shadow-sm h-100 d-flex flex-column">
-
-                      <!-- Course Image -->
-                      <img src="images/Cardiology and Heart Diseases.png" class="card-img-top img-fluid"
-                        alt="Cardiology and Heart Diseases">
-
-                      <!-- Card Body -->
-                      <div class="card-body d-flex flex-column">
-                        <h6 class="fw-bold fs-6 mb-2">Cardiology and Heart Diseases</h6>
-
-                        <small class="text-muted d-block mb-1">Starts on:</small>
-                        <div class="text-dark small mb-1">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
-                        </div>
-
-                        <div class="text-dark small">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-
-                      <!-- Footer -->
-                      <div
-                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center mt-auto">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-
-                <!-- Gynecology and Obstetrics -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="course-details.html" class="card-link">
-                    <div class="card border-0 shadow-sm h-100">
-                      <img src="images/Gynecology.png" class="card-img-top" alt="Gynecology and Obstetrics">
-                      <div class="card-body">
-                        <h6 class="fw-bold">Gynecology and Obstetrics</h6>
-                        <small class="text-muted d-block">Starts on :</small>
-                        <div class="text-darksmall">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
-                        </div>
-                        <div class="text-darksmall mt-1">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-                      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- General Surgery -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="course-details.html" class="card-link">
-                    <div class="card border-0 shadow-sm h-100">
-                      <img src="images/General Surgery.png" class="card-img-top" alt="General Surgery">
-                      <div class="card-body">
-                        <h6 class="fw-bold">General Surgery, including</h6>
-                        <small class="text-muted d-block">Starts on :</small>
-                        <div class="text-dark small">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
-                        </div>
-                        <div class="text-dark small mt-1">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-                      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <!-- Dermagnostix webinar series -->
-                <div class="col-lg-4 col-md-12">
-                  <a href="course-details.html" class="card-link">
-                    <div class="card border-0 shadow-sm h-100">
-                      <img src="images/Dermagnostic webinar.png" class="card-img-top" alt="Dermagnostix webinar series">
-                      <div class="card-body">
-                        <h6 class="fw-bold">Dermagnostix webinar series</h6>
-                        <small class="text-muted d-block">Starts on :</small>
-                        <div class="text-dark small">
-                          <i class="bi bi-calendar3 me-1"></i> 22 July 2025
-                          <i class="bi bi-clock ms-3 me-1"></i> 12:30 PM → 04:36 PM
-                        </div>
-                        <div class="text-dark small mt-1">
-                          <i class="bi bi-camera-video me-1"></i> 1 Session
-                        </div>
-                      </div>
-                      <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                        <span class="badge-one-time">One-time</span>
-                        <span class="text-primary fw-bold small text-decoration-underline">View Details</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Footer -->

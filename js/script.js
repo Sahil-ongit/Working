@@ -180,3 +180,37 @@ document.getElementById("addSession").addEventListener("click", function () {
   sessionTemplate.querySelectorAll("input[type='file']").forEach(setupImagePreview);
 });
 
+
+
+
+document.querySelectorAll('.ux-select').forEach(select => {
+  const btn = select.querySelector('.ux-select__button');
+  const label = select.querySelector('.ux-select__label');
+  const menu = select.querySelector('.ux-select__menu');
+  const options = select.querySelectorAll('.ux-select__option');
+  const hidden = select.querySelector('input[type="hidden"]');
+
+  // Toggle dropdown
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    select.classList.toggle('open');
+  });
+
+  // Select option
+  options.forEach(opt => {
+    opt.addEventListener('click', () => {
+      options.forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      label.textContent = opt.textContent;
+      hidden.value = opt.dataset.value;
+      select.classList.remove('open');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', e => {
+    if (!select.contains(e.target)) {
+      select.classList.remove('open');
+    }
+  });
+});
