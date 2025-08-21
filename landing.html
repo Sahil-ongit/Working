@@ -115,9 +115,9 @@
       <div class="search-box shadow p-4 rounded-4 bg-white animate-on-scroll">
         <h2 class="mb-4 heading-playfair animate-on-scroll text-dark ">Find Your Course</h2>
         <form class="row g-3">
-          <!-- Category -->
+          <!-- Category Dropdown -->
           <div class="col-md-3 col-12 animate-on-scroll">
-            <div class="dropdown w-100">
+            <div class="dropdown dropup w-100">
               <button class="btn dropdown-toggle custom-bs-select w-100" type="button" id="categoryDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Select Category
@@ -127,12 +127,14 @@
                 <li><a class="dropdown-item" href="#" data-value="oncology">Oncology</a></li>
                 <li><a class="dropdown-item" href="#" data-value="surgery">Surgery</a></li>
               </ul>
+              <input type="hidden" name="category" id="categoryInput">
             </div>
           </div>
 
-          <!-- Course Type -->
+
+          <!-- Course Type Dropdown -->
           <div class="col-md-3 col-12 animate-on-scroll">
-            <div class="dropdown w-100">
+            <div class="dropdown dropup w-100">
               <button class="btn dropdown-toggle custom-bs-select w-100" type="button" id="courseTypeDropdown"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Select Course Type
@@ -141,20 +143,24 @@
                 <li><a class="dropdown-item" href="#" data-value="one-time">One Time</a></li>
                 <li><a class="dropdown-item" href="#" data-value="series">Series</a></li>
               </ul>
+              <input type="hidden" name="course_type" id="courseTypeInput">
             </div>
           </div>
+
+
 
 
 
           <!-- Course Name -->
           <div class="col-md-4 col-12 animate-on-scroll">
-            <div class="input-group input-group-lg animate-on-scroll">
+            <div class="input-group animate-on-scroll">
               <span class="input-group-text bg-white border-end-0">
                 <i class="bi bi-search"></i>
               </span>
-              <input class="form-control border-start-0" placeholder="Course Name" type="text" />
+              <input class="form-control border-start-0 custom-bs-select" placeholder="Course Name" type="text" />
             </div>
           </div>
+
           <!-- Search Button -->
           <div class="col-md-2 col-12 d-flex justify-content-md-end animate-on-scroll">
             <button class="btn btn-primary btn-lg w-100 w-md-auto rounded-3" type="submit">Search</button>
@@ -720,7 +726,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- Upcoming Courses -->
   <section class="py-5 bg-light animate-on-scroll">
     <div class="container animate-on-scroll">

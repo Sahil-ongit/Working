@@ -132,6 +132,8 @@
 }
 
 
+
+
 .Landing-page .step-number
 {
   font-family: 'SpaceGrotesk-Regular', sans-serif;
@@ -440,7 +442,7 @@
   background: #fff;
   border: 1.5px solid #e5e7eb;
   border-radius: 5px;
-  padding: 12px 16px;
+  padding: 15px 16px;
   font-size: 1rem;
   font-weight: 500;
   color: #374151;
@@ -504,6 +506,17 @@
   margin-left: 0;
 }
 
+
+/* Keep border visible on hover/focus for dropdown buttons */
+.custom-bs-select,
+.custom-bs-select:hover,
+.custom-bs-select:focus,
+.custom-bs-select:active {
+  border: 1.5px solid #e5e7eb !important; /* your normal border color */
+  background-color: #fff !important;      /* keep white background */
+  color: #374151 !important;              /* text color */
+  box-shadow: none !important;            /* remove Bootstrap blue shadow */
+}
 
 
 .price-badge {
@@ -584,11 +597,8 @@
   padding: 100px 0;
 }
 
-/* Categories */
-.Landing-page .category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
+
 
 /* Features */
 .Landing-page .feature-box {
@@ -654,8 +664,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Landing-page .category-card:hover {
-  transform: translateY(-6px);
+.Landing-page .category-card {
+  
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -1206,17 +1216,9 @@
   object-fit: contain;
 }
 
-/* On hover: change color & slightly enlarge */
-.Landing-page .footer-dark .d-flex.gap-2 a:hover {
-  background-color: #0180FF;
-  /* blue */
-  transform: scale(0.1rem);
-}
 
-.Landing-page .footer-dark .d-flex.gap-2 a:hover img {
-  filter: brightness(0) invert(1);
-  /* make icon white */
-}
+
+
 
 /* Fix gap for Nest Hub & similar screens */
 @media (min-width: 1024px) and (max-width: 1199.98px) {
@@ -1548,6 +1550,18 @@
 }
 
 
+/* Force equal height for all course cards in the grid */
+.faculty-dashboard .row.g-4 > div {
+  display: flex;
+}
+
+.faculty-dashboard .card {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 
 
@@ -1564,6 +1578,30 @@
   background-color: transparent !important;
 }
 
+
+
+/* Ensure card footer items stay aligned side by side on all screens */
+.card-footer {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* prevent stacking */
+  gap: 10px; /* keeps spacing clean */
+}
+
+.card-footer .badge-one-time,
+.card-footer .text-primary {
+  white-space: nowrap; /* stops text wrapping */
+  font-size: 0.9rem;   /* keeps consistent size */
+}
+
+/* Fix dashboard cards layout between 992px and 1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .faculty-dashboard .col-lg-4.col-md-12 {
+    flex: 0 0 50%;   /* force 2 columns */
+    max-width: 50%;
+  }
+}
 
 
 /* Hide Bootstrap’s default caret */
@@ -1813,17 +1851,21 @@
   object-fit: contain;
 }
 
-.footer-dark .d-flex.gap-2 a:hover {
-  background-color: #0180FF;
-  /* blue hover background */
-  transform: scale(1.1);
-  /* enlarge slightly on hover */
+.footer-dark .d-flex.gap-2 a {
+  display: inline-flex;           /* center icon inside */
+  align-items: center;
+  justify-content: center;
+  width: 50px;                    /* fixed width */
+  height: 50px;                   /* fixed height */
+  border-radius: 50%;             /* perfect circle */
+  transition: all 0.3s ease;      /* smooth hover effect */
 }
 
-.footer-dark .d-flex.gap-2 a:hover img {
-  filter: brightness(0) invert(1);
-  /* make icon white on hover */
+.footer-dark .d-flex.gap-2 a:hover {
+  background-color: #0180FF;      /* blue background */
+  transform: scale(1.1);          /* scale evenly */
 }
+
 
 .brand-name {
   font-family: 'Belleza', sans-serif;

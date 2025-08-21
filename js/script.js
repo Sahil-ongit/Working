@@ -50,6 +50,59 @@ document.querySelectorAll('.progress-circle').forEach(function (circle) {
 
 
 
+
+//Dropdown
+
+ document.addEventListener("DOMContentLoaded", function () {
+    // Select all dropdowns inside search box
+    document.querySelectorAll(".search-box .dropdown").forEach(dropdown => {
+      const button = dropdown.querySelector("button");
+      const hiddenInput = dropdown.querySelector("input[type=hidden]");
+      const items = dropdown.querySelectorAll(".dropdown-item");
+
+      items.forEach(item => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+          const value = this.getAttribute("data-value");
+          const text = this.textContent;
+
+          // Update button text
+          button.textContent = text;
+
+          // Store value in hidden input
+          if (hiddenInput) hiddenInput.value = value;
+
+          // Also store value as data-selected on button (optional)
+          button.setAttribute("data-selected", value);
+        });
+      });
+    });
+  });
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  function handleDropdownFlip() {
+    const dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach(dd => {
+      if (window.innerWidth < 768) {
+        dd.classList.add("dropup");
+      } else {
+        dd.classList.remove("dropup");
+      }
+    });
+  }
+
+  // Run on load
+  handleDropdownFlip();
+
+  // Run on resize
+  window.addEventListener("resize", handleDropdownFlip);
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const circles = document.querySelectorAll('.progress-circle');
 
