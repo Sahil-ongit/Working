@@ -420,6 +420,9 @@
   padding: .25rem .5rem;
 }
 
+
+
+
 .nav-link.active {
   color: #0180FF;
 }
@@ -430,6 +433,12 @@
   text-decoration: none;
 }
 
+
+.Landing-page .navbar-nav .nav-link {
+  font-weight: 500;
+  padding: .25rem .5rem;
+
+}
 
 /* Faculty Dashboard Background */
 .Landing-page .featured-courses {
@@ -512,7 +521,7 @@
 .custom-bs-select:hover,
 .custom-bs-select:focus,
 .custom-bs-select:active {
-  border: 1.5px solid #e5e7eb !important; /* your normal border color */
+  /* your normal border color */
   background-color: #fff !important;      /* keep white background */
   color: #374151 !important;              /* text color */
   box-shadow: none !important;            /* remove Bootstrap blue shadow */
@@ -557,11 +566,7 @@
 
 
 
-.Landing-page .btn-pill {
-  border-radius: 999px;
-  padding: .45rem 1.1rem;
-  font-weight: 600;
-}
+
 
 .Landing-page .icon-circle {
   width: 40px;
@@ -1579,6 +1584,12 @@
 }
 
 
+.faculty-dashboard .navbar-brand {
+  font-family: "Belleza", serif;
+  color: #1e90ff;
+  font-size: 32px;
+  letter-spacing: .2px;
+}
 
 /* Ensure card footer items stay aligned side by side on all screens */
 .card-footer {
@@ -1743,6 +1754,29 @@
   background-color: #f0f4ff;
 }
 
+/* Blue + inside light blue circle */
+.blue-plus-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #cce5ff; /* light blue circle */
+  color: #007bff;            /* blue plus sign */
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 6px;         /* space before text */
+  transition: all 0.3s ease; /* smooth hover effect */
+}
+
+/* Change circle & plus when button is hovered */
+.btn:hover .blue-plus-circle {
+  background-color: #0d6efd; /* dark blue circle */
+  color: #fff;               /* white plus */
+}
+
+
 .faculty-dashboard .sidebar .nav-link.active {
   background-color: #eaf2ff;
   color: #0180FF;
@@ -1861,9 +1895,23 @@
   transition: all 0.3s ease;      /* smooth hover effect */
 }
 
-.footer-dark .d-flex.gap-2 a:hover {
-  background-color: #0180FF;      /* blue background */
-  transform: scale(1.1);          /* scale evenly */
+.social-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #1a1d29; /* dark circle background */
+  color: #ffffff;            /* white icon */
+  font-size: 20px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover: only icon color changes */
+.social-circle:hover {
+  color: #007bff; /* Bootstrap blue */
 }
 
 
@@ -1914,11 +1962,42 @@
 }
 
 
+.course-details .navbar-brand {
+  font-family: "Belleza", serif;
+  color: #1e90ff;
+  font-size: 32px;
+  letter-spacing: .2px;
+}
+
 .course-details .navbar-nav .nav-link {
   font-weight: 500;
   padding: .25rem .5rem;
 
 }
+
+/* Trainer card image responsiveness */
+.trainer-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Tablet screens (≤ 991px) */
+@media (max-width: 991.98px) {
+  .trainer-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Mobile screens (≤ 576px) */
+@media (max-width: 576px) {
+  .trainer-img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
 
 /* ============================= */
 /* Course Edit Styles       */
@@ -1941,4 +2020,11 @@
   font-weight: 500;
   padding: .25rem .5rem;
 
+}
+
+.course-edit .navbar-brand {
+  font-family: "Belleza", serif;
+  color: #1e90ff;
+  font-size: 32px;
+  letter-spacing: .2px;
 }
