@@ -117,10 +117,13 @@
         <form class="row g-3">
           <!-- Category Dropdown -->
           <div class="col-md-3 col-12 animate-on-scroll">
-            <div class="dropdown dropup w-100">
-              <button class="btn dropdown-toggle custom-bs-select w-100" type="button" id="categoryDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Select Category
+            <div class="dropdown dropup w-100 position-relative">
+              <button
+                class="btn dropdown-toggle custom-bs-select w-100 d-flex justify-content-between align-items-center"
+                type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Select Category</span>
+                <!-- Custom Chevron -->
+                <img src="images/Chevron_new.svg" alt="▼" class="custom-chevron">
               </button>
               <ul class="dropdown-menu custom-bs-menu w-100" aria-labelledby="categoryDropdown">
                 <li><a class="dropdown-item" href="#" data-value="pediatrics">Pediatrics</a></li>
@@ -132,12 +135,16 @@
           </div>
 
 
+
           <!-- Course Type Dropdown -->
           <div class="col-md-3 col-12 animate-on-scroll">
-            <div class="dropdown dropup w-100">
-              <button class="btn dropdown-toggle custom-bs-select w-100" type="button" id="courseTypeDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Select Course Type
+            <div class="dropdown dropup w-100 position-relative">
+              <button
+                class="btn dropdown-toggle custom-bs-select w-100 d-flex justify-content-between align-items-center"
+                type="button" id="courseTypeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Select Course Type</span>
+                <!-- Custom Chevron -->
+                <img src="images/Chevron_new.svg" alt="▼" class="custom-chevron">
               </button>
               <ul class="dropdown-menu custom-bs-menu w-100" aria-labelledby="courseTypeDropdown">
                 <li><a class="dropdown-item" href="#" data-value="one-time">One Time</a></li>
@@ -155,7 +162,7 @@
           <div class="col-md-4 col-12 animate-on-scroll">
             <div class="input-group animate-on-scroll">
               <span class="input-group-text bg-white border-end-0">
-                <i class="bi bi-search"></i>
+                <i class="bi bi-search form"></i>
               </span>
               <input class="form-control border-start-0 custom-bs-select" placeholder="Course Name" type="text" />
             </div>
@@ -1047,7 +1054,7 @@
       </div>
     </div>
   </section>
-   <!-- Footer -->
+  <!-- Footer -->
   <footer class="py-5 footer-dark ">
     <div class="container text-lg-start text-center faculty-animate">
       <div class="row">

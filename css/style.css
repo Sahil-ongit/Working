@@ -528,6 +528,29 @@
 }
 
 
+/* Default state (unfocused) */
+.Landing-page .input-group {
+  border: 1.5px solid #e5e7eb;   /* light gray border */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Focused state */
+.Landing-page .input-group:focus-within {
+  border-color: #ef4444;  /* red */
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15);
+}
+
+/* Remove inner borders */
+.Landing-page .input-group .form-control,
+.Landing-page .input-group .input-group-text {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+
+
 .price-badge {
   position: absolute;
   bottom: -10px;
@@ -565,6 +588,26 @@
 
 
 
+.custom-bs-select .custom-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+  /* Default = black/dark */
+}
+
+/* Rotate + change color when dropdown is open */
+.custom-bs-select[aria-expanded="true"] .custom-chevron {
+  transform: rotate(180deg);
+  filter: invert(28%) sepia(96%) saturate(3700%) hue-rotate(340deg) brightness(95%) contrast(90%);
+  /* This filter makes it RED */
+}
+
+
+/* Remove Bootstrap's default caret */
+.custom-bs-select.dropdown-toggle::after {
+  display: none !important;
+}
 
 
 
